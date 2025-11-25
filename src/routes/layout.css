@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+	:root {
+		--color-navy: #2E3192;
+		--color-orange: #FF6B35;
+		--color-lime: #C4D82E;
+		--color-beige: #F5F1E8;
+	}
+}
