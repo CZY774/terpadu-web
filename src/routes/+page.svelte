@@ -8,16 +8,16 @@
 </script>
 
 <div class="min-h-screen bg-[#C4D82E] flex items-center justify-center relative overflow-hidden">
-	<svg class="absolute top-0 right-0 w-1/2 h-1/2" viewBox="0 0 200 200">
-		<path d="M 0,100 Q 50,0 100,50 T 200,100" fill="none" stroke="#2E3192" stroke-width="8" />
-		<path d="M 0,100 Q 50,0 100,50 T 200,100" fill="none" stroke="#F5F1E8" stroke-width="6" transform="translate(0, 5)" />
-		<path d="M 0,100 Q 50,0 100,50 T 200,100" fill="none" stroke="#FF6B35" stroke-width="6" transform="translate(0, 10)" />
+	<svg class="absolute top-0 right-0 w-2/3 h-1/3" viewBox="0 0 400 200" preserveAspectRatio="xMaxYMin slice">
+		<path d="M 0,50 Q 100,0 200,80 T 400,100 L 400,0 L 0,0 Z" fill="none" stroke="#2E3192" stroke-width="12" />
+		<path d="M 0,50 Q 100,0 200,80 T 400,100 L 400,0 L 0,0 Z" fill="none" stroke="#F5F1E8" stroke-width="8" transform="translate(0, 8)" />
+		<path d="M 0,50 Q 100,0 200,80 T 400,100 L 400,0 L 0,0 Z" fill="none" stroke="#FF6B35" stroke-width="8" transform="translate(0, 16)" />
 	</svg>
 	
-	<svg class="absolute bottom-0 left-0 w-1/2 h-1/2" viewBox="0 0 200 200">
-		<path d="M 0,0 Q 50,100 100,50 T 200,0" fill="none" stroke="#FF6B35" stroke-width="8" />
-		<path d="M 0,0 Q 50,100 100,50 T 200,0" fill="none" stroke="#F5F1E8" stroke-width="6" transform="translate(0, 5)" />
-		<path d="M 0,0 Q 50,100 100,50 T 200,0" fill="none" stroke="#2E3192" stroke-width="6" transform="translate(0, 10)" />
+	<svg class="absolute bottom-0 left-0 w-2/3 h-1/3" viewBox="0 0 400 200" preserveAspectRatio="xMinYMax slice">
+		<path d="M 0,100 Q 100,200 200,120 T 400,150 L 400,200 L 0,200 Z" fill="none" stroke="#2E3192" stroke-width="12" />
+		<path d="M 0,100 Q 100,200 200,120 T 400,150 L 400,200 L 0,200 Z" fill="none" stroke="#F5F1E8" stroke-width="8" transform="translate(0, -8)" />
+		<path d="M 0,100 Q 100,200 200,120 T 400,150 L 400,200 L 0,200 Z" fill="none" stroke="#FF6B35" stroke-width="8" transform="translate(0, -16)" />
 	</svg>
 
 	<div class="text-center z-10">
