@@ -28,54 +28,70 @@
 	}
 </script>
 
-<div class="max-w-4xl mx-auto">
-	<h1 class="text-3xl font-bold text-[#2E3192] mb-4">GOOD MORNING, {username.toUpperCase()}</h1>
-	<h2 class="text-2xl font-bold text-[#2E3192] mb-6">MY SCHEDULE</h2>
+<div class="max-w-4xl mx-auto relative">
+	<svg class="absolute -top-8 right-0 w-2/3 h-24" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMin slice">
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#2E3192" stroke-width="10" />
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#F5F1E8" stroke-width="6" transform="translate(0, 6)" />
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#FF6B35" stroke-width="6" transform="translate(0, 12)" />
+	</svg>
+
+	<h1 class="text-2xl font-bold text-[#2E3192] mb-2">GOOD MORNING, {username.toUpperCase()}</h1>
+	<h2 class="text-3xl font-bold text-[#2E3192] mb-6">MY SCHEDULE</h2>
 
 	<!-- Today's Schedules -->
-	<div class="bg-[#C4D82E] rounded-[2.5rem] p-8 mb-6">
-		<div class="space-y-4">
+	<div class="bg-[#C4D82E] rounded-[2.5rem] p-6 mb-6">
+		<div class="space-y-3">
 			{#each schedules as schedule}
-				<div class="flex items-center gap-4">
-					<div class="w-4 h-4 rounded-full bg-[#FF6B35]"></div>
+				<div class="flex items-start gap-3">
+					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
-						<p class="font-bold text-[#2E3192] text-lg">{schedule.title}</p>
+						<p class="font-bold text-[#2E3192] text-lg leading-tight">{schedule.title}</p>
 						<p class="text-[#2E3192]">{schedule.time}</p>
 					</div>
 				</div>
 			{:else}
-				<p class="text-[#2E3192] text-lg">No schedules</p>
+				<p class="text-[#2E3192]">No schedules</p>
 			{/each}
 		</div>
 	</div>
 
 	<!-- Calendar -->
-	<div class="bg-[#C4D82E] rounded-[2.5rem] p-8 mb-6">
-		<h3 class="text-2xl font-bold text-[#2E3192] mb-4">CALENDAR</h3>
-		<h4 class="text-xl font-bold text-[#2E3192] mb-4">NOVEMBER</h4>
-		<div class="grid grid-cols-7 gap-3 text-center">
-			{#each ['S','M','T','W','T','F','S'] as day}
-				<div class="font-bold text-[#2E3192] text-lg">{day}</div>
-			{/each}
-			{#each Array.from({length: 30}, (_, i) => i + 1) as day}
-				<button
-					class="w-10 h-10 rounded-full {day === selectedDate ? 'bg-[#2E3192] text-white' : 'text-[#2E3192]'} font-bold text-lg hover:bg-[#2E3192] hover:text-white transition"
-					on:click={() => selectedDate = day}
-				>
-					{day}
-				</button>
-			{/each}
+	<div class="mb-6">
+		<h3 class="text-3xl font-bold text-[#2E3192] mb-4">CALENDAR</h3>
+		<div class="bg-[#C4D82E] rounded-[2.5rem] p-6">
+			<h4 class="text-xl font-bold text-[#2E3192] mb-4">NOVEMBER</h4>
+			<div class="grid grid-cols-7 gap-2 text-center">
+				{#each ['S','M','T','W','T','F','S'] as day}
+					<div class="font-bold text-[#2E3192]">{day}</div>
+				{/each}
+				{#each Array.from({length: 30}, (_, i) => i + 1) as day}
+					<button
+						class="w-10 h-10 rounded-full {day === selectedDate ? 'bg-[#2E3192] text-white' : 'text-[#2E3192]'} font-bold hover:bg-[#2E3192] hover:text-white transition"
+						on:click={() => selectedDate = day}
+					>
+						{day}
+					</button>
+				{/each}
+			</div>
 		</div>
 	</div>
 
 	<!-- Category Icons -->
-	<div class="bg-[#C4D82E] rounded-[2.5rem] p-8">
-		<h3 class="text-2xl font-bold text-[#2E3192] mb-6">CATEGORY EVENT</h3>
-		<div class="flex gap-6 justify-center flex-wrap">
-			<img src="/Artboard 9.png" alt="Category" class="w-20 h-20" />
-			<img src="/Artboard 3.png" alt="Category" class="w-20 h-20" />
-			<img src="/Artboard 4.png" alt="Category" class="w-20 h-20" />
-			<img src="/Artboard 5.png" alt="Category" class="w-20 h-20" />
+	<div class="mb-6">
+		<h3 class="text-3xl font-bold text-[#2E3192] mb-4">CATEGORY EVENT</h3>
+		<div class="flex gap-4 justify-center flex-wrap">
+			<div class="w-24 h-24 bg-[#C4D82E] rounded-3xl flex items-center justify-center">
+				<img src="/Artboard 9.png" alt="Category" class="w-16 h-16" />
+			</div>
+			<div class="w-24 h-24 bg-[#C4D82E] rounded-3xl flex items-center justify-center">
+				<img src="/Artboard 3.png" alt="Category" class="w-16 h-16" />
+			</div>
+			<div class="w-24 h-24 bg-[#C4D82E] rounded-3xl flex items-center justify-center">
+				<img src="/Artboard 4.png" alt="Category" class="w-16 h-16" />
+			</div>
+			<div class="w-24 h-24 bg-[#C4D82E] rounded-3xl flex items-center justify-center">
+				<img src="/Artboard 5.png" alt="Category" class="w-16 h-16" />
+			</div>
 		</div>
 	</div>
 </div>
