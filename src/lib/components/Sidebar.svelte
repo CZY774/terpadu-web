@@ -1,47 +1,33 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import logo from '$lib/assets/logo.png';
 	import { goto } from '$app/navigation';
 
-	const navItems = [
-		{ name: 'Home', icon: '🏠', href: '/home' },
-		{ name: 'Schedule', icon: '📅', href: '/schedule' },
-		{ name: 'Tasks', icon: '✅', href: '/tasks' },
-		{ name: 'Account', icon: '👤', href: '/account' }
-	];
+	let { show = $bindable(false) } = $props();
 
-	let isSidebarOpen = false;
-
-	function toggleSidebar() {
-		isSidebarOpen = !isSidebarOpen;
+	function logout() {
+		localStorage.removeItem('isAuthenticated');
+		localStorage.removeItem('username');
+		show = false;
+		goto('/login');
 	}
 
-	function handleLogout() {
-		localStorage.removeItem('isAuthenticated');
-		goto('/');
+	function close() {
+		show = false;
 	}
 </script>
 
-<aside class="h-screen w-64 bg-gray-800 text-white flex flex-col">
-	<div class="p-4 flex items-center justify-center">
-		<img src={logo} alt="Gerbang Waktu Logo" class="h-12" />
-	</div>
-	<nav class="flex-1">
-		<ul>
-			{#each navItems as item}
-				<li>
-					<a
-						href={item.href}
-						class="flex items-center p-4 hover:bg-gray-700 {($page.url.pathname === item.href || ($page.url.pathname === '/' && item.href === '/home')) ? 'bg-gray-700' : ''}"
-					>
-						<span class="mr-3">{item.icon}</span>
-						{item.name}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
-	<div class="p-4 border-t border-gray-700">
-		<button on:click={handleLogout} class="w-full text-left p-2 hover:bg-gray-700 rounded">Logout</button>
+{#if show}
+	<div class="fixed inset-0 bg-black/50 z-40" onclick={close}></div>
+{/if}
+
+<aside class="fixed top-0 right-0 h-full w-80 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show ? 'translate-x-0' : 'translate-x-full'}">
+	<div class="p-8">
+		<button onclick={close} class="text-white mb-8 ml-auto block text-3xl font-bold">✕</button>
+		<img src="/Artboard 1_logo.png" alt="Logo" class="w-44 mb-12" />
+		<nav class="space-y-6 text-white font-bold text-xl">
+			<a href="/account" onclick={close} class="block">Account</a>
+			<a href="/home" onclick={close} class="block">Privacy</a>
+			<a href="/home" onclick={close} class="block">Setting</a>
+		</nav>
+		<button onclick={logout} class="block text-left w-full mt-12 text-white font-bold text-xl">Log Out</button>
 	</div>
 </aside>
