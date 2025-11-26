@@ -13,50 +13,49 @@
 	}
 </script>
 
-<div class="min-h-screen bg-[#F5F1E8] flex flex-col items-center justify-center p-4 relative overflow-hidden">
-	<div class="absolute top-0 left-0 right-0 h-44 bg-[#C4D82E] rounded-b-[5rem] flex items-center justify-center">
-		<img src="/Artboard 1_logo.png" alt="Gerbang Waktu" class="w-48 pt-4" />
+<div class="min-h-screen bg-[#F5F1E8] flex flex-col">
+	<!-- Top curved lime section -->
+	<div class="relative h-72 bg-[#C4D82E] rounded-b-[50%] flex items-start justify-center pt-12 overflow-visible">
+		<img src="/Artboard 1_logo.png" alt="Gerbang Waktu" class="w-64" />
 	</div>
 
-	<div class="w-full max-w-lg z-10 mt-20">
-		<div class="bg-[#F5F1E8] px-6 pb-6 pt-12">
-			<h2 class="text-2xl font-bold text-[#2E3192] text-center mb-1">It's Time to unlocked</h2>
-			<h3 class="text-xl font-bold text-[#2E3192] text-center mb-10">New Experiment</h3>
+	<!-- Main content -->
+	<div class="flex-1 flex flex-col items-center px-6 -mt-8">
+		<div class="w-full max-w-md">
+			<h2 class="text-3xl font-bold text-[#2E3192] text-center leading-tight">It's Time to unlocked</h2>
+			<h3 class="text-3xl font-bold text-[#2E3192] text-center mb-8 leading-tight">New Experiment</h3>
 
-			<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-				<div class="bg-[#C4D82E] rounded-[3rem] p-8 space-y-5 relative">
-					<img src="/Artboard 2.png" alt="Mascot" class="w-28 absolute -top-10 -left-6" />
+			<div class="relative">
+				<img src="/Artboard 2.png" alt="Mascot" class="w-36 absolute -top-12 -left-12 z-10" />
+				
+				<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E] rounded-[3rem] p-8 pt-16">
+					<h4 class="text-4xl font-bold text-[#2E3192] text-center mb-10">LOGIN</h4>
 					
-					<h4 class="text-3xl font-bold text-[#2E3192] text-center mb-4">LOGIN</h4>
-					
-					<div>
-						<label class="block text-[#2E3192] font-bold text-lg mb-2">Username</label>
+					<div class="mb-6">
+						<label class="block text-[#2E3192] font-bold text-xl mb-2">Username</label>
 						<input
 							type="text"
 							bind:value={username}
-							class="w-full px-6 py-4 rounded-full bg-[#FF6B35] focus:outline-none text-white placeholder:text-white/70"
+							class="w-full px-6 py-4 rounded-full bg-[#FF6B35] focus:outline-none"
 							required
 						/>
 					</div>
 
-					<div>
-						<label class="block text-[#2E3192] font-bold text-lg mb-2">Password</label>
+					<div class="mb-10">
+						<label class="block text-[#2E3192] font-bold text-xl mb-2">Password</label>
 						<input
 							type="password"
 							bind:value={password}
-							class="w-full px-6 py-4 rounded-full bg-[#FF6B35] focus:outline-none text-white placeholder:text-white/70"
+							class="w-full px-6 py-4 rounded-full bg-[#FF6B35] focus:outline-none"
 							required
 						/>
 					</div>
 
-					<button
-						type="submit"
-						class="w-full py-5 bg-[#FF6B35] text-[#2E3192] font-bold text-2xl rounded-full hover:bg-[#ff8555] transition mt-6"
-					>
+					<button type="submit" class="w-full py-5 bg-[#FF6B35] text-[#2E3192] font-bold text-3xl rounded-full">
 						LOGIN
 					</button>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
