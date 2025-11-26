@@ -32,55 +32,50 @@
 	}
 </script>
 
-<div class="max-w-4xl mx-auto">
-	<h1 class="text-3xl font-bold text-[#2E3192] mb-4">GOOD MORNING, {username.toUpperCase()}</h1>
-	<h2 class="text-2xl font-bold text-[#2E3192] mb-6">TODAY TASK</h2>
+<div class="max-w-4xl mx-auto relative">
+	<svg class="absolute -top-8 right-0 w-2/3 h-24" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMin slice">
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#2E3192" stroke-width="10" />
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#F5F1E8" stroke-width="6" transform="translate(0, 6)" />
+		<path d="M 0,50 Q 100,0 200,40 T 400,50" fill="none" stroke="#FF6B35" stroke-width="6" transform="translate(0, 12)" />
+	</svg>
+
+	<h1 class="text-2xl font-bold text-[#2E3192] mb-2">GOOD MORNING, {username.toUpperCase()}</h1>
+	<h2 class="text-3xl font-bold text-[#2E3192] mb-6">TODAY TASK</h2>
 
 	<!-- Date Selector -->
-	<div class="bg-[#C4D82E] rounded-[2.5rem] p-6 mb-6">
+	<div class="bg-[#C4D82E] rounded-[2.5rem] p-4 mb-6">
 		<div class="flex gap-3 justify-center overflow-x-auto">
 			{#each [20, 21, 22, 23] as date, i}
 				<button
-					class="px-8 py-4 rounded-2xl {i === 0 ? 'bg-[#2E3192] text-white' : 'bg-[#F5F1E8] text-[#2E3192]'} font-bold flex-shrink-0"
+					class="px-6 py-3 rounded-2xl {i === 0 ? 'bg-[#2E3192] text-white' : 'bg-[#F5F1E8] text-[#2E3192]'} font-bold flex-shrink-0 border-2 {i === 0 ? 'border-[#2E3192]' : 'border-[#FF6B35]'}"
 				>
-					<div class="text-2xl">{date}</div>
+					<div class="text-xl">{date}</div>
 					<div class="text-sm">Nov</div>
-					<div class="w-3 h-3 rounded-full {i === 0 ? 'bg-white' : 'bg-[#FF6B35]'} mx-auto mt-2"></div>
+					<div class="w-3 h-3 rounded-full {i === 0 ? 'bg-white' : 'bg-[#FF6B35]'} mx-auto mt-1"></div>
 				</button>
 			{/each}
 		</div>
 	</div>
 
 	<!-- Tasks List -->
-	<div class="bg-[#C4D82E] rounded-[2.5rem] p-8">
-		<h3 class="text-2xl font-bold text-[#2E3192] mb-6">TO DO</h3>
-		<div class="space-y-4">
-			{#each tasks as task}
-				<div class="flex items-center gap-4">
-					<button
-						on:click={() => toggleTask(task.id, task.completed)}
-						class="w-6 h-6 rounded-full border-4 border-[#FF6B35] {task.completed ? 'bg-[#FF6B35]' : 'bg-transparent'} flex-shrink-0"
-					></button>
-					<div class="flex-1">
-						<p class="font-bold text-[#2E3192] text-lg {task.completed ? 'line-through' : ''}">{task.title}</p>
-						<p class="text-[#2E3192]">Due: {task.dueDate}</p>
+	<div class="mb-6">
+		<h3 class="text-3xl font-bold text-[#2E3192] mb-4">TO DO</h3>
+		<div class="bg-[#C4D82E] rounded-[2.5rem] p-6">
+			<div class="space-y-3">
+				{#each tasks as task}
+					<div class="flex items-start gap-3">
+						<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
+						<div class="flex-1">
+							<p class="font-bold text-[#2E3192] text-lg leading-tight {task.completed ? 'line-through' : ''}">{task.title}</p>
+							<p class="text-[#2E3192]">at {task.dueDate}</p>
+						</div>
 					</div>
-				</div>
-			{:else}
-				<p class="text-[#2E3192] text-lg">No tasks</p>
-			{/each}
+				{:else}
+					<p class="text-[#2E3192]">No tasks</p>
+				{/each}
+			</div>
 		</div>
 	</div>
-
-	<!-- Add Button -->
-	<button
-		on:click={() => showModal = true}
-		class="fixed bottom-28 right-6 w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition"
-	>
-		<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4" />
-		</svg>
-	</button>
 </div>
 
 <!-- Modal -->
