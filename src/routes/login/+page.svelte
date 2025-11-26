@@ -14,12 +14,10 @@
 </script>
 
 <div class="min-h-screen bg-[#F5F1E8] flex flex-col">
-	<!-- Top curved lime section -->
 	<div class="relative h-72 bg-[#C4D82E] rounded-b-[50%] flex items-start justify-center pt-12 overflow-visible">
 		<img src="/Artboard 1_logo.png" alt="Gerbang Waktu" class="w-64" />
 	</div>
 
-	<!-- Main content -->
 	<div class="flex-1 flex flex-col items-center px-6 -mt-8">
 		<div class="w-full max-w-md">
 			<h2 class="text-3xl font-bold text-[#2E3192] text-center leading-tight">It's Time to unlocked</h2>
@@ -29,9 +27,9 @@
 				<img src="/Artboard 2.png" alt="Mascot" class="w-36 absolute -top-12 -left-12 z-10" />
 				
 				<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E] rounded-[3rem] p-8 pt-16">
-					<h4 class="text-4xl font-bold text-[#2E3192] text-center mb-10">LOGIN</h4>
+					<h4 class="text-4xl font-bold text-[#2E3192] text-center mb-8">LOGIN</h4>
 					
-					<div class="mb-6">
+					<div class="mb-4">
 						<label class="block text-[#2E3192] font-bold text-xl mb-2">Username</label>
 						<input
 							type="text"
@@ -41,7 +39,7 @@
 						/>
 					</div>
 
-					<div class="mb-10">
+					<div class="mb-8">
 						<label class="block text-[#2E3192] font-bold text-xl mb-2">Password</label>
 						<input
 							type="password"
