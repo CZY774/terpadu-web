@@ -21,7 +21,7 @@
 
 	<div class="bg-[#C4D82E] rounded-[3rem] p-6 mb-8">
 		<div class="flex gap-3 justify-start overflow-x-auto">
-			{#each [20, 21, 22, 23] as date, i}
+			{#each [20, 21, 22, 23] as date, i (date)}
 				<button
 					class="px-6 py-3 rounded-[1.5rem] {i === 0
 						? 'bg-[#2E3192] text-white'
@@ -42,7 +42,7 @@
 	<h3 class="text-3xl font-bold text-[#2E3192] mb-6">TO DO</h3>
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 min-h-[280px]">
 		<div class="space-y-4">
-			{#each tasks as task}
+			{#each tasks as task (task.id)}
 				<div class="flex items-start gap-3">
 					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
