@@ -19,10 +19,18 @@
 	<div
 		class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
 		onclick={() => (show = false)}
+		onkeydown={(e) => e.key === 'Escape' && (show = false)}
+		role="button"
+		tabindex="0"
+		aria-label="Close dialog"
 	>
 		<div
 			class="bg-[#F5F1E8] rounded-[3rem] p-8 w-full max-w-md"
 			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
 		>
 			<div class="flex items-center justify-center mb-8">
 				<img src="/right-ribbon.png" alt="Mascot" class="w-32" />
