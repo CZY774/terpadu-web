@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { addTask } from '$lib/db';
 
 	let title = $state('');
@@ -8,7 +9,7 @@
 	function handleSubmit() {
 		if (title && deadline) {
 			addTask(title, '', deadline, '');
-			goto('/tasks');
+			goto(resolve('/tasks'));
 		}
 	}
 </script>
@@ -50,7 +51,7 @@
 			>
 			<button
 				type="button"
-				onclick={() => goto('/tasks')}
+				onclick={() => goto(resolve('/tasks'))}
 				class="flex-1 py-5 bg-gray-300 text-[#2E3192] font-bold rounded-full text-lg">Cancel</button
 			>
 		</div>
