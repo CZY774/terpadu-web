@@ -22,7 +22,7 @@
 <aside class="fixed top-0 right-0 h-full w-80 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show ? 'translate-x-0' : 'translate-x-full'}">
 	<div class="p-8">
 		<button onclick={close} class="text-white mb-8 ml-auto block text-3xl font-bold">✕</button>
-		<img src="/Artboard 1_logo.png" alt="Logo" class="w-44 mb-12" />
+		<img src="/logo.png" alt="Logo" class="w-44 mb-12" />
 		<nav class="space-y-6 text-white font-bold text-xl">
 			<a href="/account" onclick={close} class="block">Account</a>
 			<a href="/home" onclick={close} class="block">Privacy</a>
