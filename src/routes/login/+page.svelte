@@ -27,13 +27,13 @@
 		<h3 class="text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 32px;">New Experiment</h3>
 
 		<div class="relative w-full max-w-sm">
-			<img src="/full-mascot.png" alt="Mascot" class="w-44 absolute -left-16 top-0 z-10" />
+			<img style="transform: scaleX(-1);" src="/full-mascot.png" alt="Mascot" class="w-44 absolute -left-22 -top-10 z-10" />
 			
-			<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E]/40 rounded-[3.5rem] w-full" style="padding: 80px 40px 64px;">
-				<h4 class="text-4xl font-bold text-[#2E3192] text-center" style="margin-bottom: 80px;">LOGIN</h4>
+			<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E]/40 rounded-[3.5rem] w-full" style="padding: 64px 40px 48px;">
+				<h4 class="text-4xl font-bold text-[#2E3192] text-center" style="margin-bottom: 48px;">LOGIN</h4>
 				
-				<div style="margin-bottom: 64px;">
-					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 20px;">Username</label>
+				<div style="margin-bottom: 40px;">
+					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;">Username</label>
 					<input
 						type="text"
 						bind:value={username}
@@ -42,8 +42,8 @@
 					/>
 				</div>
 
-				<div style="margin-bottom: 160px;">
-					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 20px;">Password</label>
+				<div style="margin-bottom: 80px;">
+					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;">Password</label>
 					<input
 						type="password"
 						bind:value={password}
