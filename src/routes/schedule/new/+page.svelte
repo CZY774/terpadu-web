@@ -27,8 +27,9 @@
 		class="space-y-6"
 	>
 		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-2">NAME EVENT</label>
+			<label for="event-name" class="block text-[#2E3192] font-bold text-lg mb-2">NAME EVENT</label>
 			<input
+				id="event-name"
 				type="text"
 				bind:value={title}
 				class="w-full px-6 py-4 rounded-full bg-gray-300 focus:outline-none text-[#2E3192] font-bold placeholder:text-gray-500"
@@ -37,8 +38,11 @@
 		</div>
 
 		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-2">START EVENT</label>
+			<label for="start-event" class="block text-[#2E3192] font-bold text-lg mb-2"
+				>START EVENT</label
+			>
 			<input
+				id="start-event"
 				type="datetime-local"
 				bind:value={startDate}
 				class="w-full px-6 py-4 rounded-full bg-gray-300 focus:outline-none text-[#2E3192] font-bold"
@@ -47,16 +51,17 @@
 		</div>
 
 		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-2">END EVENT</label>
+			<label for="end-event" class="block text-[#2E3192] font-bold text-lg mb-2">END EVENT</label>
 			<input
+				id="end-event"
 				type="datetime-local"
 				bind:value={endDate}
 				class="w-full px-6 py-4 rounded-full bg-gray-300 focus:outline-none text-[#2E3192] font-bold"
 			/>
 		</div>
 
-		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-4">REMAINDER :</label>
+		<fieldset>
+			<legend class="block text-[#2E3192] font-bold text-lg mb-4">REMAINDER :</legend>
 			<div class="grid grid-cols-2 gap-3">
 				<button type="button" class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
 					>30 MINUTE</button
@@ -71,10 +76,10 @@
 					>1 DAY</button
 				>
 			</div>
-		</div>
+		</fieldset>
 
-		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-4">CATEGORY EVENT</label>
+		<fieldset>
+			<legend class="block text-[#2E3192] font-bold text-lg mb-4">CATEGORY EVENT</legend>
 			<div class="flex gap-4 justify-center flex-wrap">
 				<button
 					type="button"
@@ -105,7 +110,7 @@
 					<img src="/peek-mascot.png" alt="Category" class="w-16 h-16 object-contain" />
 				</button>
 			</div>
-		</div>
+		</fieldset>
 
 		<div class="flex gap-4 pt-4">
 			<button
