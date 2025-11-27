@@ -18,7 +18,7 @@
 	<div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onclick={() => show = false}>
 		<div class="bg-[#F5F1E8] rounded-[3rem] p-8 w-full max-w-md" onclick={(e) => e.stopPropagation()}>
 			<div class="flex items-center justify-center mb-8">
-				<img src="/Artboard 2.png" alt="Mascot" class="w-32" />
+				<img src="/right-ribbon.png" alt="Mascot" class="w-32" />
 			</div>
 			<h3 class="text-2xl font-bold text-[#2E3192] text-center mb-8">GOOD MORNING, LOU!</h3>
 			<div class="space-y-4">
