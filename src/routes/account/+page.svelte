@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 relative">
-		<img src="/Artboard 2.png" alt="Mascot" class="w-32 absolute -top-6 right-10" />
+		<img src="/right-ribbon.png" alt="Mascot" class="w-32 absolute -top-6 right-10" />
 		
 		<div class="mb-8">
 			<h2 class="text-2xl font-bold text-[#2E3192] mb-6">YOUR STREAK</h2>
