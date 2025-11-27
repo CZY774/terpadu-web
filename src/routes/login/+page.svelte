@@ -78,10 +78,11 @@
 				</h4>
 
 				<div style="margin-bottom: 20px;">
-					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
+					<label for="username" class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
 						>Username</label
 					>
 					<input
+						id="username"
 						type="text"
 						bind:value={username}
 						class="w-full px-6 py-4 rounded-full bg-[#FF6B35] focus:outline-none"
@@ -90,11 +91,12 @@
 				</div>
 
 				<div style="margin-bottom: 60px;">
-					<label class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
+					<label for="password" class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
 						>Password</label
 					>
 					<div class="relative">
 						<input
+							id="password"
 							type={showPassword ? 'text' : 'password'}
 							bind:value={password}
 							class="w-full px-6 py-4 pr-14 rounded-full bg-[#FF6B35] focus:outline-none"
@@ -104,6 +106,7 @@
 							type="button"
 							onclick={() => (showPassword = !showPassword)}
 							class="absolute right-2 top-1/2 -translate-y-1/2 text-[#2E3192]"
+							aria-label={showPassword ? 'Hide password' : 'Show password'}
 						>
 							{#if showPassword}
 								<svg
