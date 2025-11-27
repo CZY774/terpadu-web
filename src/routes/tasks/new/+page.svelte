@@ -25,8 +25,9 @@
 		class="space-y-6"
 	>
 		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-2">NAME TASK</label>
+			<label for="task-name" class="block text-[#2E3192] font-bold text-lg mb-2">NAME TASK</label>
 			<input
+				id="task-name"
 				type="text"
 				bind:value={title}
 				class="w-full px-6 py-4 rounded-full bg-gray-300 focus:outline-none text-[#2E3192] font-bold placeholder:text-gray-500"
@@ -35,8 +36,9 @@
 		</div>
 
 		<div>
-			<label class="block text-[#2E3192] font-bold text-lg mb-2">DEADLINE</label>
+			<label for="deadline" class="block text-[#2E3192] font-bold text-lg mb-2">DEADLINE</label>
 			<input
+				id="deadline"
 				type="date"
 				bind:value={deadline}
 				class="w-full px-6 py-4 rounded-full bg-gray-300 focus:outline-none text-[#2E3192] font-bold"
