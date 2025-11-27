@@ -14,25 +14,25 @@
 </script>
 
 <div class="min-h-screen bg-[#F5F1E8] flex flex-col">
-	<div class="relative h-48 md:h-64 lg:h-80">
+	<div class="relative h-36 md:h-56 lg:h-56">
 		<svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#2E3192" stroke-width="3" />
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#FF6B35" stroke-width="2" transform="translate(0, 2)" />
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="#C4D82E" transform="translate(0, 3)" />
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="#C4D82E" />
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#FF6B35" stroke-width="1.5" />
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#2E3192" stroke-width="1" transform="translate(0, 0.8)" />
 		</svg>
-		<div class="absolute inset-0 flex items-start justify-center pt-10">
-			<img src="/logo.png" alt="Gerbang Waktu" class="w-56" />
+		<div class="absolute inset-0 flex items-start justify-center pt-8 md:pt-10 lg:pt-10">
+			<img src="/logo.png" alt="Gerbang Waktu" class="w-32 md:w-52 lg:w-52" />
 		</div>
 	</div>
 
-	<div class="flex-1 flex flex-col items-center px-6 pt-6 md:pt-16 lg:pt-24 pb-12">
-		<h2 class="text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 4px;">It's Time to unlocked</h2>
-		<h3 class="text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 32px;">New Experiment</h3>
+	<div  style="padding: 0px 40px;" class="flex-1 flex flex-col items-center px-3 md:px-6 pt-6 md:pt-16 lg:pt-24 pb-12">
+		<h2 class="text-2xl md:text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 4px;">It's Time to unlocked</h2>
+		<h3 class="text-2xl md:text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 62px;">New Experiment</h3>
 
 		<div class="relative w-full max-w-sm">
-			<img style="transform: scaleX(-1);" src="/full-mascot.png" alt="Mascot" class="w-50 absolute -left-15 -top-24 z-10" />
+			<img style="transform: scaleX(-1);" src="/full-mascot.png" alt="Mascot" class="w-40 md:w-50 absolute -left-12 md:-left-15 -top-18 md:-top-24 z-10 md:z-10" />
 			
-			<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E]/40 rounded-[3.5rem] w-full" style="padding: 64px 40px 48px;">
+			<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="bg-[#C4D82E]/40 rounded-[3.5rem] w-full shadow-lg" style="padding: 64px 40px 48px;">
 				<h4 class="text-4xl font-bold text-[#2E3192] text-center" style="margin-bottom: 48px;">LOGIN</h4>
 				
 				<div style="margin-bottom: 20px;">
