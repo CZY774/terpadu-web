@@ -8,8 +8,12 @@
 
 	onMount(() => {
 		username = localStorage.getItem('username') || 'LOU';
-		schedules = getSchedules().filter(s => s.date === new Date().toISOString().split('T')[0]).slice(0, 2);
-		tasks = getTasks().filter(t => !t.completed).slice(0, 2);
+		schedules = getSchedules()
+			.filter((s) => s.date === new Date().toISOString().split('T')[0])
+			.slice(0, 2);
+		tasks = getTasks()
+			.filter((t) => !t.completed)
+			.slice(0, 2);
 	});
 </script>
 

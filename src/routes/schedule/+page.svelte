@@ -12,7 +12,7 @@
 	});
 
 	function loadSchedules() {
-		schedules = getSchedules().filter(s => s.date === new Date().toISOString().split('T')[0]);
+		schedules = getSchedules().filter((s) => s.date === new Date().toISOString().split('T')[0]);
 	}
 </script>
 
@@ -40,15 +40,17 @@
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 mb-8">
 		<h4 class="text-xl font-bold text-[#2E3192] mb-6">NOVEMBER</h4>
 		<div class="grid grid-cols-7 gap-2 text-center mb-3">
-			{#each ['S','M','T','W','T','F','S'] as day}
+			{#each ['S', 'M', 'T', 'W', 'T', 'F', 'S'] as day}
 				<div class="font-bold text-[#2E3192]">{day}</div>
 			{/each}
 		</div>
 		<div class="grid grid-cols-7 gap-2 text-center">
-			{#each Array.from({length: 30}, (_, i) => i + 1) as day}
+			{#each Array.from({ length: 30 }, (_, i) => i + 1) as day}
 				<button
-					class="w-10 h-10 rounded-full {day === 20 ? 'bg-[#2E3192] text-white' : 'text-[#2E3192]'} font-bold hover:bg-[#2E3192] hover:text-white transition"
-					onclick={() => selectedDate = day}
+					class="w-10 h-10 rounded-full {day === 20
+						? 'bg-[#2E3192] text-white'
+						: 'text-[#2E3192]'} font-bold hover:bg-[#2E3192] hover:text-white transition"
+					onclick={() => (selectedDate = day)}
 				>
 					{day}
 				</button>

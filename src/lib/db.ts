@@ -47,7 +47,13 @@ export function saveSchedules(schedules: Schedule[]): void {
 	localStorage.setItem(STORAGE_KEYS.SCHEDULES, JSON.stringify(schedules));
 }
 
-export function addSchedule(title: string, description: string, date: string, time: string, category: string): Schedule {
+export function addSchedule(
+	title: string,
+	description: string,
+	date: string,
+	time: string,
+	category: string
+): Schedule {
 	const schedules = getSchedules();
 	const newSchedule: Schedule = { id: uuidv4(), title, date, time, category, completed: false };
 	schedules.push(newSchedule);
@@ -66,7 +72,12 @@ export function saveTasks(tasks: Task[]): void {
 	localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(tasks));
 }
 
-export function addTask(title: string, description: string, dueDate: string, category: string): Task {
+export function addTask(
+	title: string,
+	description: string,
+	dueDate: string,
+	category: string
+): Task {
 	const tasks = getTasks();
 	const newTask: Task = { id: uuidv4(), title, dueDate, category, completed: false };
 	tasks.push(newTask);

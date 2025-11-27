@@ -19,7 +19,11 @@
 	<div class="fixed inset-0 bg-black/50 z-40" onclick={close}></div>
 {/if}
 
-<aside class="fixed top-0 right-0 h-full w-80 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show ? 'translate-x-0' : 'translate-x-full'}">
+<aside
+	class="fixed top-0 right-0 h-full w-80 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show
+		? 'translate-x-0'
+		: 'translate-x-full'}"
+>
 	<div class="p-8">
 		<button onclick={close} class="text-white mb-8 ml-auto block text-3xl font-bold">✕</button>
 		<img src="/logo.png" alt="Logo" class="w-44 mb-12" />
@@ -28,6 +32,8 @@
 			<a href="/home" onclick={close} class="block">Privacy</a>
 			<a href="/home" onclick={close} class="block">Setting</a>
 		</nav>
-		<button onclick={logout} class="block text-left w-full mt-12 text-white font-bold text-xl">Log Out</button>
+		<button onclick={logout} class="block text-left w-full mt-12 text-white font-bold text-xl"
+			>Log Out</button
+		>
 	</div>
 </aside>

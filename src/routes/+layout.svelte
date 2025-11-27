@@ -20,7 +20,7 @@
 		<ModalDialog bind:show={showModal} />
 
 		<header class="bg-[#FF6B35] rounded-b-[2.5rem] p-5 flex justify-end">
-			<button onclick={() => showSidebar = true} class="text-white">
+			<button onclick={() => (showSidebar = true)} class="text-white">
 				<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
 					<rect x="3" y="5" width="18" height="3" rx="1.5" />
 					<rect x="3" y="10.5" width="18" height="3" rx="1.5" />
@@ -33,6 +33,6 @@
 			{@render children()}
 		</main>
 
-		<BottomNav onAddClick={() => showModal = true} />
+		<BottomNav onAddClick={() => (showModal = true)} />
 	</div>
 {/if}

@@ -11,7 +11,7 @@
 	});
 
 	function loadTasks() {
-		tasks = getTasks().filter(t => !t.completed);
+		tasks = getTasks().filter((t) => !t.completed);
 	}
 </script>
 
@@ -23,11 +23,17 @@
 		<div class="flex gap-3 justify-start overflow-x-auto">
 			{#each [20, 21, 22, 23] as date, i}
 				<button
-					class="px-6 py-3 rounded-[1.5rem] {i === 0 ? 'bg-[#2E3192] text-white' : 'bg-[#F5F1E8] text-[#2E3192]'} font-bold flex-shrink-0 border-2 {i === 0 ? 'border-[#2E3192]' : 'border-[#FF6B35]'} min-w-[90px]"
+					class="px-6 py-3 rounded-[1.5rem] {i === 0
+						? 'bg-[#2E3192] text-white'
+						: 'bg-[#F5F1E8] text-[#2E3192]'} font-bold flex-shrink-0 border-2 {i === 0
+						? 'border-[#2E3192]'
+						: 'border-[#FF6B35]'} min-w-[90px]"
 				>
 					<div class="text-xl font-bold">{date}</div>
 					<div class="text-sm">Nov</div>
-					<div class="w-3 h-3 rounded-full {i === 0 ? 'bg-white' : 'bg-[#FF6B35]'} mx-auto mt-1"></div>
+					<div
+						class="w-3 h-3 rounded-full {i === 0 ? 'bg-white' : 'bg-[#FF6B35]'} mx-auto mt-1"
+					></div>
 				</button>
 			{/each}
 		</div>
