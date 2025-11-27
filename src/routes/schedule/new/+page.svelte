@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { addSchedule } from '$lib/db';
 
 	let title = $state('');
 	let startDate = $state('');
 	let endDate = $state('');
-	let reminder = $state('');
 	let selectedCategory = $state('');
 
 	function handleSubmit() {
 		if (title && startDate) {
 			addSchedule(title, '', startDate, '', selectedCategory);
-			goto('/schedule');
+			goto(resolve('/schedule'));
 		}
 	}
 </script>
@@ -58,25 +58,17 @@
 		<div>
 			<label class="block text-[#2E3192] font-bold text-lg mb-4">REMAINDER :</label>
 			<div class="grid grid-cols-2 gap-3">
-				<button
-					type="button"
-					class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
-					onclick={() => (reminder = '30')}>30 MINUTE</button
+				<button type="button" class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
+					>30 MINUTE</button
 				>
-				<button
-					type="button"
-					class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
-					onclick={() => (reminder = '15')}>15 MINUTE</button
+				<button type="button" class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
+					>15 MINUTE</button
 				>
-				<button
-					type="button"
-					class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
-					onclick={() => (reminder = '60')}>1 HOUR</button
+				<button type="button" class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
+					>1 HOUR</button
 				>
-				<button
-					type="button"
-					class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
-					onclick={() => (reminder = '1440')}>1 DAY</button
+				<button type="button" class="py-4 bg-gray-300 text-[#2E3192] font-bold rounded-full"
+					>1 DAY</button
 				>
 			</div>
 		</div>
@@ -122,7 +114,7 @@
 			>
 			<button
 				type="button"
-				onclick={() => goto('/schedule')}
+				onclick={() => goto(resolve('/schedule'))}
 				class="flex-1 py-5 bg-gray-300 text-[#2E3192] font-bold rounded-full text-lg">Cancel</button
 			>
 		</div>
