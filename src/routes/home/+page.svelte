@@ -18,7 +18,7 @@
 	<h2 class="text-3xl font-bold text-[#2E3192] mb-8">TODAY EVENT</h2>
 
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 mb-8 relative min-h-[240px]">
-		<img src="/Artboard 5.png" alt="Mascot" class="w-24 absolute -top-8 left-6" />
+		<img src="/peek-mascot.png" alt="Mascot" class="w-24 absolute -top-8 left-6" />
 		<div class="pt-16 space-y-4">
 			{#each schedules as schedule}
 				<div class="flex items-start gap-3">
@@ -50,6 +50,6 @@
 				<p class="text-[#2E3192]">No pending tasks</p>
 			{/each}
 		</div>
-		<img src="/Artboard 2.png" alt="Mascot" class="w-36 absolute -bottom-2 right-6" />
+		<img src="/right-ribbon.png" alt="Mascot" class="w-36 absolute -bottom-2 right-6" />
 	</div>
 </div>
