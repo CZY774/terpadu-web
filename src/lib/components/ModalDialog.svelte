@@ -1,16 +1,17 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 
 	let { show = $bindable(false) } = $props();
 
 	function handleNewSchedule() {
 		show = false;
-		goto('/schedule/new');
+		goto(resolve('/schedule/new'));
 	}
 
 	function handleNewTask() {
 		show = false;
-		goto('/tasks/new');
+		goto(resolve('/tasks/new'));
 	}
 </script>
 
