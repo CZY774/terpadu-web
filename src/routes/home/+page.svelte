@@ -24,7 +24,7 @@
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 mb-8 relative min-h-[240px]">
 		<img src="/peek-mascot.png" alt="Mascot" class="w-24 absolute -top-8 left-6" />
 		<div class="pt-16 space-y-4">
-			{#each schedules as schedule}
+			{#each schedules as schedule (schedule.id)}
 				<div class="flex items-start gap-3">
 					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
@@ -42,7 +42,7 @@
 
 	<div class="bg-[#C4D82E] rounded-[3rem] p-8 relative min-h-[280px] pb-20">
 		<div class="space-y-4">
-			{#each tasks as task}
+			{#each tasks as task (task.id)}
 				<div class="flex items-start gap-3">
 					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
