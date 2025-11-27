@@ -66,13 +66,13 @@
 					<img src="/Artboard 9.png" alt="Category" class="w-16 h-16 object-contain" />
 				</button>
 				<button type="button" class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center" onclick={() => selectedCategory = 'hands'}>
-					<img src="/Artboard 3.png" alt="Category" class="w-16 h-16 object-contain" />
+					<img src="/left-ribbon.png" alt="Category" class="w-16 h-16 object-contain" />
 				</button>
 				<button type="button" class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center" onclick={() => selectedCategory = 'carrot'}>
-					<img src="/Artboard 4.png" alt="Category" class="w-16 h-16 object-contain" />
+					<img src="/full-mascot.png" alt="Category" class="w-16 h-16 object-contain" />
 				</button>
 				<button type="button" class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center" onclick={() => selectedCategory = 'people'}>
-					<img src="/Artboard 5.png" alt="Category" class="w-16 h-16 object-contain" />
+					<img src="/peek-mascot.png" alt="Category" class="w-16 h-16 object-contain" />
 				</button>
 			</div>
 		</div>
