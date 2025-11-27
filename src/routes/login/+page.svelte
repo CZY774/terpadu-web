@@ -78,8 +78,10 @@
 				</h4>
 
 				<div style="margin-bottom: 20px;">
-					<label for="username" class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
-						>Username</label
+					<label
+						for="username"
+						class="block text-[#2E3192] font-bold text-xl"
+						style="margin-bottom: 4px;">Username</label
 					>
 					<input
 						id="username"
@@ -91,8 +93,10 @@
 				</div>
 
 				<div style="margin-bottom: 60px;">
-					<label for="password" class="block text-[#2E3192] font-bold text-xl" style="margin-bottom: 4px;"
-						>Password</label
+					<label
+						for="password"
+						class="block text-[#2E3192] font-bold text-xl"
+						style="margin-bottom: 4px;">Password</label
 					>
 					<div class="relative">
 						<input
