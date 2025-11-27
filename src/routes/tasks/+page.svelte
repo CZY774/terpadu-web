@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getTasks } from '$lib/db';
+	import { getTasks, type Task } from '$lib/db';
 
 	let username = $state('');
-	let tasks = $state([]);
+	let tasks = $state<Task[]>([]);
 
 	onMount(() => {
 		username = localStorage.getItem('username') || 'LOU';
