@@ -94,7 +94,7 @@
 						class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						required
 					>
-						{#each categories as category}
+						{#each categories as category (category.id)}
 							<option value={category.id}>{category.name}</option>
 						{/each}
 					</select>
