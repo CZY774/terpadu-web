@@ -15,10 +15,10 @@
 
 <div class="min-h-screen bg-[#F5F1E8] flex flex-col">
 	<div class="relative h-36 md:h-56 lg:h-56">
-		<svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="#C4D82E" />
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#FF6B35" stroke-width="1.5" />
-			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#2E3192" stroke-width="1" transform="translate(0, 0.8)" />
+		<svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 400" preserveAspectRatio="none">
+			<path d="M 0,0 L 0,240 Q 500,400 1000,240 L 1000,0 Z" fill="#C4D82E" />
+			<path d="M 0,240 Q 500,400 1000,240" fill="none" stroke="#FF6B35" stroke-width="30" stroke-linecap="round" />
+			<path d="M 0,240 Q 500,400 1000,240" fill="none" stroke="#2E3192" stroke-width="22" transform="translate(0, 12)" stroke-linecap="round" />
 		</svg>
 		<div class="absolute inset-0 flex items-start justify-center pt-8 md:pt-10 lg:pt-10">
 			<img src="/logo.png" alt="Gerbang Waktu" class="w-32 md:w-52 lg:w-52" />
