@@ -21,6 +21,6 @@
 	</svg>
 
 	<div class="text-center z-10">
-		<img src="/Artboard 1_logo.png" alt="Gerbang Waktu" class="w-80 mx-auto drop-shadow-2xl" />
+		<img src="/logo.png" alt="Gerbang Waktu" class="w-80 mx-auto drop-shadow-2xl" />
 	</div>
 </div>
