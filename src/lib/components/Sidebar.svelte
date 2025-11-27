@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 
 	let { show = $bindable(false) } = $props();
 
@@ -7,7 +8,7 @@
 		localStorage.removeItem('isAuthenticated');
 		localStorage.removeItem('username');
 		show = false;
-		goto('/login');
+		goto(resolve('/login'));
 	}
 
 	function close() {
@@ -28,9 +29,9 @@
 		<button onclick={close} class="text-white mb-8 ml-auto block text-3xl font-bold">✕</button>
 		<img src="/logo.png" alt="Logo" class="w-44 mb-12" />
 		<nav class="space-y-6 text-white font-bold text-xl">
-			<a href="/account" onclick={close} class="block">Account</a>
-			<a href="/home" onclick={close} class="block">Privacy</a>
-			<a href="/home" onclick={close} class="block">Setting</a>
+			<a href={resolve('/account')} onclick={close} class="block">Account</a>
+			<a href={resolve('/home')} onclick={close} class="block">Privacy</a>
+			<a href={resolve('/home')} onclick={close} class="block">Setting</a>
 		</nav>
 		<button onclick={logout} class="block text-left w-full mt-12 text-white font-bold text-xl"
 			>Log Out</button
