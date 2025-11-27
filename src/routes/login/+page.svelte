@@ -14,15 +14,18 @@
 </script>
 
 <div class="min-h-screen bg-[#F5F1E8] flex flex-col">
-	<div class="relative h-64">
-		<div class="absolute inset-0 bg-[#2E3192] rounded-b-[50%]"></div>
-		<div class="absolute inset-0 bg-[#FF6B35] rounded-b-[50%] m-2"></div>
-		<div class="absolute inset-0 bg-[#C4D82E] rounded-b-[50%] m-4 flex items-start justify-center pt-10">
+	<div class="relative h-48 md:h-64 lg:h-80">
+		<svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#2E3192" stroke-width="3" />
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="none" stroke="#FF6B35" stroke-width="2" transform="translate(0, 2)" />
+			<path d="M 0,0 L 0,60 Q 50,100 100,60 L 100,0 Z" fill="#C4D82E" transform="translate(0, 3)" />
+		</svg>
+		<div class="absolute inset-0 flex items-start justify-center pt-10">
 			<img src="/logo.png" alt="Gerbang Waktu" class="w-56" />
 		</div>
 	</div>
 
-	<div class="flex-1 flex flex-col items-center px-6 pt-6 pb-12">
+	<div class="flex-1 flex flex-col items-center px-6 pt-6 md:pt-16 lg:pt-24 pb-12">
 		<h2 class="text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 4px;">It's Time to unlocked</h2>
 		<h3 class="text-3xl font-bold text-[#2E3192] text-center" style="margin-bottom: 32px;">New Experiment</h3>
 
