@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { resolve } from '$app/paths';
 
 	let { onAddClick } = $props();
 </script>
@@ -8,7 +9,7 @@
 	class="fixed bottom-0 left-0 right-0 bg-[#FF6B35] rounded-t-[2.5rem] flex justify-around py-4 px-4"
 >
 	<a
-		href="/home"
+		href={resolve('/home')}
 		class="flex flex-col items-center text-white {$page.url.pathname === '/home'
 			? 'opacity-100'
 			: 'opacity-70'}"
@@ -19,7 +20,7 @@
 		<span class="text-xs mt-1 font-bold">HOME</span>
 	</a>
 	<a
-		href="/schedule"
+		href={resolve('/schedule')}
 		class="flex flex-col items-center text-white {$page.url.pathname.startsWith('/schedule')
 			? 'opacity-100'
 			: 'opacity-70'}"
@@ -39,7 +40,7 @@
 		</div>
 	</button>
 	<a
-		href="/tasks"
+		href={resolve('/tasks')}
 		class="flex flex-col items-center text-white {$page.url.pathname.startsWith('/tasks')
 			? 'opacity-100'
 			: 'opacity-70'}"
@@ -50,7 +51,7 @@
 		<span class="text-xs mt-1 font-bold">TASK</span>
 	</a>
 	<a
-		href="/account"
+		href={resolve('/account')}
 		class="flex flex-col items-center text-white {$page.url.pathname === '/account'
 			? 'opacity-100'
 			: 'opacity-70'}"
