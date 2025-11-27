@@ -58,12 +58,7 @@
 
 	<h3 class="text-3xl font-bold text-[#2E3192] mb-6">CATEGORY EVENT</h3>
 	<div class="flex gap-4 justify-center flex-wrap">
-		{#each [
-			{ id: 1, img: '/Artboard 9.png' },
-			{ id: 2, img: '/right-ribbon.png' },
-			{ id: 3, img: '/full-mascot.png' },
-			{ id: 4, img: '/peek-mascot.png' }
-		] as category (category.id)}
+		{#each [{ id: 1, img: '/Artboard 9.png' }, { id: 2, img: '/right-ribbon.png' }, { id: 3, img: '/full-mascot.png' }, { id: 4, img: '/peek-mascot.png' }] as category (category.id)}
 			<div class="w-28 h-28 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center">
 				<img src={category.img} alt="Category" class="w-16 h-16 object-contain" />
 			</div>
