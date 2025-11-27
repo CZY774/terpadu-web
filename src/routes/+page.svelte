@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 
 	onMount(() => {
-		setTimeout(() => goto('/login'), 2000);
+		setTimeout(() => goto(resolve('/login')), 2000);
 	});
 </script>
 
