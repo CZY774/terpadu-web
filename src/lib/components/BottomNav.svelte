@@ -30,7 +30,7 @@
 		</svg>
 		<span class="text-xs mt-1 font-bold">SCHEDULE</span>
 	</a>
-	<button onclick={onAddClick} class="flex flex-col items-center text-white -mt-3">
+	<button onclick={onAddClick} class="flex flex-col items-center text-white -mt-3" aria-label="Add new item">
 		<div
 			class="w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center border-4 border-[#F5F1E8]"
 		>
