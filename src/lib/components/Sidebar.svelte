@@ -17,7 +17,7 @@
 </script>
 
 {#if show}
-	<div class="fixed inset-0 bg-black/50 z-40" onclick={close}></div>
+	<div class="fixed inset-0 bg-black/50 z-40" onclick={close} onkeydown={(e) => e.key === 'Escape' && close()} role="button" tabindex="0" aria-label="Close sidebar"></div>
 {/if}
 
 <aside
