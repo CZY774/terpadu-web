@@ -17,184 +17,56 @@
 	});
 </script>
 
-<div class="home-container">
-	<h1 class="greeting">GOOD MORNING, {username.toUpperCase()}!</h1>
+<div class="max-w-[680px] mx-auto px-4">
+	<h1 class="text-[2.5rem] md:text-[2rem] sm:text-[1.75rem] font-extrabold text-[#2E3192] mb-8 tracking-wide">
+		GOOD MORNING, {username.toUpperCase()}!
+	</h1>
 
-	<div class="event-card">
-		<img src="/peek-mascot.png" alt="Mascot" class="peek-mascot" />
-		<h2 class="card-title">TODAY EVENT</h2>
-		<div class="card-content">
+	<div class="bg-[#C4D82E] rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
+		<img src="/peek-mascot.png" alt="Mascot" class="absolute -top-10 md:-top-8 sm:-top-8 left-6 sm:left-4 w-[140px] md:w-[90px] sm:w-[80px] h-auto z-10" />
+		<h2 class="inline-block bg-[#C4D82E] text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold px-8 md:px-6 sm:px-6 py-4 md:py-3 sm:py-3 rounded-[2rem] mb-6 tracking-wide">
+			TODAY EVENT
+		</h2>
+		<div class="flex flex-col gap-5 relative z-[1]">
 			{#each schedules as schedule (schedule.id)}
-				<div class="item">
-					<div class="bullet"></div>
+				<div class="flex items-start gap-4">
+					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
-						<p class="item-title">{schedule.title}</p>
-						<p class="item-time">{schedule.time}</p>
+						<p class="text-[1.5rem] md:text-[1.25rem] sm:text-[1.125rem] font-bold text-[#2E3192] leading-tight mb-1">
+							{schedule.title}
+						</p>
+						<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">
+							{schedule.time}
+						</p>
 					</div>
 				</div>
 			{:else}
-				<p class="empty-text">No event today</p>
+				<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">No event today</p>
 			{/each}
 		</div>
 	</div>
 
-	<div class="task-card">
-		<h2 class="card-title-task">MY TASK</h2>
-		<div class="card-content">
+	<div class="bg-[#C4D82E] rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
+		<h2 class="text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold mb-6 tracking-wide">
+			MY TASK
+		</h2>
+		<div class="flex flex-col gap-5 relative z-[1]">
 			{#each tasks as task (task.id)}
-				<div class="item">
-					<div class="bullet"></div>
+				<div class="flex items-start gap-4">
+					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
 					<div>
-						<p class="item-title">{task.title}</p>
-						<p class="item-time">at {task.dueDate}</p>
+						<p class="text-[1.5rem] md:text-[1.25rem] sm:text-[1.125rem] font-bold text-[#2E3192] leading-tight mb-1">
+							{task.title}
+						</p>
+						<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">
+							at {task.dueDate}
+						</p>
 					</div>
 				</div>
 			{:else}
-				<p class="empty-text">No pending tasks</p>
+				<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">No pending tasks</p>
 			{/each}
 		</div>
-		<img src="/full-mascot.png" alt="Mascot" class="full-mascot" />
+		<img src="/full-mascot.png" alt="Mascot" class="absolute -bottom-4 right-6 sm:right-4 w-[200px] md:w-[130px] sm:w-[110px] h-auto z-[5]" />
 	</div>
 </div>
-
-<style>
-	.home-container {
-		max-width: 680px;
-		margin: 0 auto;
-		padding: 0 1rem;
-	}
-
-	.greeting {
-		font-size: clamp(1.75rem, 5vw, 2.5rem);
-		font-weight: 800;
-		color: #2E3192;
-		margin-bottom: 2rem;
-		letter-spacing: 0.02em;
-	}
-
-	.event-card, .task-card {
-		background: #C4D82E;
-		border-radius: 3rem;
-		padding: 2rem 2.5rem;
-		margin-bottom: 2.5rem;
-		position: relative;
-		min-height: 280px;
-	}
-
-	.peek-mascot {
-		position: absolute;
-		top: -2.5rem;
-		left: 1.5rem;
-		width: clamp(100px, 15vw, 140px);
-		height: auto;
-		z-index: 10;
-	}
-
-	.card-title {
-		background: #C4D82E;
-		color: #2E3192;
-		font-size: clamp(1.5rem, 4vw, 2rem);
-		font-weight: 800;
-		padding: 1rem 2rem;
-		border-radius: 2rem;
-		display: inline-block;
-		margin-bottom: 1.5rem;
-		letter-spacing: 0.03em;
-	}
-
-	.card-title-task {
-		color: #2E3192;
-		font-size: clamp(1.5rem, 4vw, 2rem);
-		font-weight: 800;
-		margin-bottom: 1.5rem;
-		letter-spacing: 0.03em;
-	}
-
-	.card-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-		position: relative;
-		z-index: 1;
-	}
-
-	.item {
-		display: flex;
-		align-items: flex-start;
-		gap: 1rem;
-	}
-
-	.bullet {
-		width: 1.25rem;
-		height: 1.25rem;
-		border-radius: 50%;
-		background: #FF6B35;
-		flex-shrink: 0;
-		margin-top: 0.25rem;
-	}
-
-	.item-title {
-		font-size: clamp(1.125rem, 3vw, 1.5rem);
-		font-weight: 700;
-		color: #2E3192;
-		line-height: 1.3;
-		margin-bottom: 0.25rem;
-	}
-
-	.item-time {
-		font-size: clamp(1rem, 2.5vw, 1.25rem);
-		color: #2E3192;
-		font-weight: 500;
-	}
-
-	.empty-text {
-		color: #2E3192;
-		font-size: clamp(1rem, 2.5vw, 1.25rem);
-		font-weight: 500;
-	}
-
-	.full-mascot {
-		position: absolute;
-		bottom: -1rem;
-		right: 1.5rem;
-		width: clamp(140px, 20vw, 200px);
-		height: auto;
-		z-index: 5;
-	}
-
-	@media (max-width: 768px) {
-		.event-card, .task-card {
-			padding: 1.75rem 2rem;
-			border-radius: 2.5rem;
-			min-height: 240px;
-		}
-
-		.peek-mascot {
-			width: 90px;
-			top: -2rem;
-		}
-
-		.full-mascot {
-			width: 130px;
-		}
-	}
-
-	@media (max-width: 320px) {
-		.event-card, .task-card {
-			padding: 1.5rem 1.5rem;
-			border-radius: 2rem;
-		}
-
-		.peek-mascot {
-			width: 80px;
-		}
-
-		.full-mascot {
-			width: 110px;
-		}
-
-		.card-title {
-			padding: 0.75rem 1.5rem;
-		}
-	}
-</style>
