@@ -19,12 +19,12 @@
 		<Sidebar bind:show={showSidebar} />
 		<ModalDialog bind:show={showModal} />
 
-		<header class="bg-[#FF6B35] rounded-b-[2.5rem] p-5 flex justify-end">
-			<button onclick={() => (showSidebar = true)} class="text-white" aria-label="Open menu">
-				<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-					<rect x="3" y="5" width="18" height="3" rx="1.5" />
-					<rect x="3" y="10.5" width="18" height="3" rx="1.5" />
-					<rect x="3" y="16" width="18" height="3" rx="1.5" />
+		<header class="header-bar">
+			<button onclick={() => (showSidebar = true)} class="menu-btn" aria-label="Open menu">
+				<svg class="hamburger-icon" fill="currentColor" viewBox="0 0 24 24">
+					<rect x="3" y="4" width="18" height="3.5" rx="1.75" />
+					<rect x="3" y="10.25" width="18" height="3.5" rx="1.75" />
+					<rect x="3" y="16.5" width="18" height="3.5" rx="1.75" />
 				</svg>
 			</button>
 		</header>
@@ -36,3 +36,61 @@
 		<BottomNav onAddClick={() => (showModal = true)} />
 	</div>
 {/if}
+
+<style>
+	.header-bar {
+		background: #FF6B35;
+		border-bottom-left-radius: 2.5rem;
+		border-bottom-right-radius: 2.5rem;
+		padding: 1.5rem 1.75rem;
+		display: flex;
+		justify-content: flex-end;
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+	}
+
+	.menu-btn {
+		color: white;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0.25rem;
+		transition: transform 0.2s;
+	}
+
+	.menu-btn:hover {
+		transform: scale(1.05);
+	}
+
+	.menu-btn:active {
+		transform: scale(0.95);
+	}
+
+	.hamburger-icon {
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+
+	@media (max-width: 768px) {
+		.header-bar {
+			padding: 1.25rem 1.5rem;
+		}
+
+		.hamburger-icon {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+
+	@media (max-width: 320px) {
+		.header-bar {
+			padding: 1rem 1.25rem;
+			border-bottom-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+		}
+
+		.hamburger-icon {
+			width: 2.25rem;
+			height: 2.25rem;
+		}
+	}
+</style>
