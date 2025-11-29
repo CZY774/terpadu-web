@@ -17,56 +17,109 @@
 	});
 </script>
 
-<div class="max-w-[680px] mx-auto px-4">
-	<h1 class="text-[2.5rem] md:text-[2rem] sm:text-[1.75rem] font-extrabold text-[#2E3192] mb-8 tracking-wide">
-		GOOD MORNING, {username.toUpperCase()}!
-	</h1>
+<div class="min-h-screen bg-[#F5F1E8]" style="padding: 80px 40px 120px;">
+	<div class="mx-auto">
+		<h1
+			class="text-[1rem] lg:text-[2.5rem] md:text-[2rem] font-extrabold text-[#2E3192] text-center"
+			style="margin-bottom: 60px; letter-spacing: 0.02em;"
+		>
+			GOOD MORNING, {username.toUpperCase()}!
+		</h1>
 
-	<div class="bg-[#C4D82E]/40 rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
-		<img src="/peek-mascot.png" alt="Mascot" class="absolute -top-10 md:-top-8 sm:-top-8 left-6 sm:left-4 w-[140px] md:w-[90px] sm:w-[80px] h-auto z-10" />
-		<h2 class="inline-block text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold px-8 md:px-6 sm:px-6 py-4 md:py-3 sm:py-3 rounded-[2rem] mb-6 tracking-wide">
-			TODAY EVENT
-		</h2>
-		<div class="flex flex-col gap-5 relative z-[1]">
-			{#each schedules as schedule (schedule.id)}
-				<div class="flex items-start gap-4">
-					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
-					<div>
-						<p class="text-[1.5rem] md:text-[1.25rem] sm:text-[1.125rem] font-bold text-[#2E3192] leading-tight mb-1">
-							{schedule.title}
+		<div class="relative" style="margin-bottom: 80px;">
+			<img
+				src="/peek-mascot.png"
+				alt="Mascot"
+				class="absolute w-30 lg:w-40 sm:w-40 top-[30px] md:top-[25px] sm:top-5 left-5 h-auto z-0"
+			/>
+			<div
+				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem] font-extrabold text-center rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem] ml-auto"
+				style="padding: 24px 40px; margin-bottom: 20px; letter-spacing: 0.02em; width: 87.5%;"
+			>
+				TODAY EVENT
+			</div>
+			<div
+				class="bg-[#C4D82E]/70 rounded-[3rem] lg:rounded-[2.5rem] md:rounded-4xl"
+				style="padding: 60px 50px; min-height: 320px;"
+			>
+				<div class="flex flex-col" style="gap: 32px;">
+					{#each schedules as schedule (schedule.id)}
+						<div class="flex items-start" style="gap: 20px;">
+							<div
+								class="rounded-full bg-[#FF6B35] shrink-0"
+								style="width: 28px; height: 28px; margin-top: 4px;"
+							></div>
+							<div>
+								<p
+									class="text-[2rem] lg:text-[1.75rem] md:text-[1.5rem] font-extrabold text-[#2E3192]"
+									style="margin-bottom: 4px; line-height: 1.2;"
+								>
+									{schedule.title}
+								</p>
+								<p
+									class="text-[1.5rem] lg:text-[1.25rem] md:text-[1.125rem] text-[#2E3192] font-medium"
+								>
+									{schedule.time}
+								</p>
+							</div>
+						</div>
+					{:else}
+						<p
+							class="text-[0.8rem] lg:text-[1.25rem] md:text-[1.125rem] text-[#2E3192] font-medium"
+						>
+							No event today
 						</p>
-						<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">
-							{schedule.time}
-						</p>
-					</div>
+					{/each}
 				</div>
-			{:else}
-				<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">No event today</p>
-			{/each}
+			</div>
 		</div>
-	</div>
 
-	<div class="bg-[#C4D82E]/40 rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
-		<h2 class="text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold mb-6 tracking-wide">
-			MY TASK
-		</h2>
-		<div class="flex flex-col gap-5 relative z-[1]">
-			{#each tasks as task (task.id)}
-				<div class="flex items-start gap-4">
-					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
-					<div>
-						<p class="text-[1.5rem] md:text-[1.25rem] sm:text-[1.125rem] font-bold text-[#2E3192] leading-tight mb-1">
-							{task.title}
+		<div class="relative" style="margin-bottom: 40px;">
+			<div
+				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem] font-extrabold rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem]"
+				style="padding: 24px 40px; margin-bottom: 20px; letter-spacing: 0.02em; width: 87.5%;"
+			>
+				MY TASK
+			</div>
+			<div
+				class="bg-[#C4D82E]/70 rounded-[3rem] lg:rounded-[2.5rem] md:rounded-4xl relative"
+				style="padding: 60px 50px; min-height: 480px;"
+			>
+				<div class="flex flex-col" style="gap: 32px;">
+					{#each tasks as task (task.id)}
+						<div class="flex items-start" style="gap: 20px;">
+							<div
+								class="rounded-full bg-[#FF6B35] shrink-0"
+								style="width: 28px; height: 28px; margin-top: 4px;"
+							></div>
+							<div>
+								<p
+									class="text-[2rem] lg:text-[1.75rem] md:text-[1.5rem] font-extrabold text-[#2E3192]"
+									style="margin-bottom: 4px; line-height: 1.2;"
+								>
+									{task.title}
+								</p>
+								<p
+									class="text-[1.5rem] lg:text-[1.25rem] md:text-[1.125rem] text-[#2E3192] font-extrabold"
+								>
+									at {task.dueDate}
+								</p>
+							</div>
+						</div>
+					{:else}
+						<p
+							class="text-[0.8rem] lg:text-[1.25rem] md:text-[1.125rem] text-[#2E3192] font-medium"
+						>
+							No pending tasks
 						</p>
-						<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">
-							at {task.dueDate}
-						</p>
-					</div>
+					{/each}
 				</div>
-			{:else}
-				<p class="text-[1.25rem] md:text-[1.125rem] sm:text-[1rem] text-[#2E3192] font-medium">No pending tasks</p>
-			{/each}
+				<img
+					src="/full-mascot.png"
+					alt="Mascot"
+					class="absolute w-45 lg:w-60 sm:w-60 -top-[90px] sm:-top-[120px] -right-10 h-auto z-0"
+				/>
+			</div>
 		</div>
-		<img src="/full-mascot.png" alt="Mascot" class="absolute -bottom-4 right-6 sm:right-4 w-[200px] md:w-[130px] sm:w-[110px] h-auto z-[5]" />
 	</div>
 </div>
