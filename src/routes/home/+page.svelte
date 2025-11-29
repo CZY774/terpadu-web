@@ -17,11 +17,11 @@
 	});
 </script>
 
-<div class="min-h-screen bg-[#F5F1E8]" style="padding: 80px 40px 120px;">
+<div class="min-h-screen bg-[#F5F1E8]" style="padding: 40px 20px 120px;">
 	<div class="mx-auto">
 		<h1
 			class="text-[1rem] lg:text-[2.5rem] md:text-[2rem] font-extrabold text-[#2E3192] text-center"
-			style="margin-bottom: 60px; letter-spacing: 0.02em;"
+			style="margin-bottom: 20px; letter-spacing: 0.02em;"
 		>
 			GOOD MORNING, {username.toUpperCase()}!
 		</h1>
