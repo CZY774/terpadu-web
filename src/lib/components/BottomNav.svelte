@@ -6,7 +6,7 @@
 </script>
 
 <nav
-	class="fixed bottom-0 left-0 right-0 bg-[#FF6B35] rounded-t-[2.5rem] sm:rounded-t-[2rem] flex justify-around items-center px-4 pt-4 pb-5 sm:pt-3 sm:pb-4 shadow-[0_-4px_12px_rgba(255,107,53,0.15)]"
+	class="fixed bottom-0 left-0 right-0 bg-[#FF6B35] rounded-t-2xl sm:rounded-t-2xl flex justify-around items-center px-4 pt-4 pb-5 sm:pt-3 sm:pb-4 shadow-[0_-4px_12px_rgba(255,107,53,0.15)]"
 >
 	<a
 		href={resolve('/home')}
