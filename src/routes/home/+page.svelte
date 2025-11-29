@@ -22,9 +22,9 @@
 		GOOD MORNING, {username.toUpperCase()}!
 	</h1>
 
-	<div class="bg-[#C4D82E] rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
+	<div class="bg-[#C4D82E]/40 rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
 		<img src="/peek-mascot.png" alt="Mascot" class="absolute -top-10 md:-top-8 sm:-top-8 left-6 sm:left-4 w-[140px] md:w-[90px] sm:w-[80px] h-auto z-10" />
-		<h2 class="inline-block bg-[#C4D82E] text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold px-8 md:px-6 sm:px-6 py-4 md:py-3 sm:py-3 rounded-[2rem] mb-6 tracking-wide">
+		<h2 class="inline-block text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold px-8 md:px-6 sm:px-6 py-4 md:py-3 sm:py-3 rounded-[2rem] mb-6 tracking-wide">
 			TODAY EVENT
 		</h2>
 		<div class="flex flex-col gap-5 relative z-[1]">
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 
-	<div class="bg-[#C4D82E] rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
+	<div class="bg-[#C4D82E]/40 rounded-[3rem] md:rounded-[2.5rem] sm:rounded-[2rem] p-10 md:p-7 sm:p-6 mb-10 relative min-h-[280px] md:min-h-[240px]">
 		<h2 class="text-[#2E3192] text-[2rem] md:text-[1.75rem] sm:text-[1.5rem] font-extrabold mb-6 tracking-wide">
 			MY TASK
 		</h2>
