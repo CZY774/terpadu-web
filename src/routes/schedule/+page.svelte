@@ -18,27 +18,27 @@
 <div class="relative" style="padding: 40px 20px 20px 20px;">
 	<!-- Decorative Wave -->
 	<svg
-		class="absolute -top-10 right-0 w-[50%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] pointer-events-none"
+		class="absolute -top-10 right-0 w-full lg:w-[850px] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] pointer-events-none"
 		style="transform: scaleX(-1); z-index: 20;"
-		viewBox="0 0 600 250"
+		viewBox="0 0 850 250"
 		preserveAspectRatio="xMaxYMin slice"
 	>
 		<path
-			d="M 600,0 Q 500,60 400,100 Q 300,140 200,170 Q 100,200 0,220"
+			d="M 600,0 Q 500,60 400,100 Q 300,140 200,170 Q 100,180 0,200"
 			fill="none"
 			stroke="#2E3192"
 			stroke-width="25"
 			stroke-linecap="round"
 		/>
 		<path
-			d="M 600,12 Q 500,72 400,112 Q 300,152 200,182 Q 100,212 0,232"
+			d="M 600,12 Q 500,72 400,112 Q 300,152 200,182 Q 100,192 0,212"
 			fill="none"
 			stroke="#E8E3D5"
 			stroke-width="25"
 			stroke-linecap="round"
 		/>
 		<path
-			d="M 600,20 Q 500,80 400,120 Q 300,160 200,190 Q 100,220 0,240"
+			d="M 600,20 Q 500,80 400,120 Q 300,160 200,190 Q 100,200 0,220"
 			fill="none"
 			stroke="#FF6B35"
 			stroke-width="15"
