@@ -14,7 +14,7 @@
 	}
 </script>
 
-<div class="max-w-2xl mx-auto">
+<div class="max-w-2xl mx-auto" style="padding: 40px 20px 120px 20px;">
 	<h1 class="text-3xl font-bold text-[#2E3192] mb-8">NEW TASK</h1>
 
 	<form
