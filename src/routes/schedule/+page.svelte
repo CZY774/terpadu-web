@@ -18,7 +18,7 @@
 <div class="relative" style="padding: 40px 20px 20px 20px;">
 	<!-- Decorative Wave -->
 	<svg
-		class="absolute -top-10 -right-5 w-[50%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] pointer-events-none"
+		class="absolute -top-10 right-0 w-[50%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] pointer-events-none"
 		style="transform: scaleX(-1); z-index: 20;"
 		viewBox="0 0 600 250"
 		preserveAspectRatio="xMaxYMin slice"
