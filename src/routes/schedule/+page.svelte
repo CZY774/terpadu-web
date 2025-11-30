@@ -27,11 +27,18 @@
 			d="M 600,0 Q 500,60 400,100 Q 300,140 200,170 Q 100,200 0,220"
 			fill="none"
 			stroke="#2E3192"
-			stroke-width="15"
+			stroke-width="25"
 			stroke-linecap="round"
 		/>
 		<path
-			d="M 600,25 Q 500,85 400,125 Q 300,165 200,195 Q 100,225 0,245"
+			d="M 600,12 Q 500,72 400,112 Q 300,152 200,182 Q 100,212 0,232"
+			fill="none"
+			stroke="#E8E3D5"
+			stroke-width="25"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 600,20 Q 500,80 400,120 Q 300,160 200,190 Q 100,220 0,240"
 			fill="none"
 			stroke="#FF6B35"
 			stroke-width="15"
@@ -46,7 +53,7 @@
 		<h2 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-3 sm:mb-4">MY SCHEDULE</h2>
 
 		<div
-			class="bg-[#C4D82E] rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-5 mb-3 sm:mb-4 min-h-[120px] sm:min-h-[130px]"
+			class="bg-[#C4D82E] rounded-[2.5rem] sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4 min-h-[120px] sm:min-h-[130px]"
 		>
 			{#if schedules.length > 0}
 				<div class="space-y-2 sm:space-y-2.5">
@@ -68,8 +75,8 @@
 		</div>
 
 		<h3 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-2 sm:mb-3">CALENDAR</h3>
-		<div class="bg-[#C4D82E] rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-5 mb-3 sm:mb-4">
-			<h4 class="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">NOVEMBER</h4>
+		<div class="bg-[#C4D82E] rounded-[2.5rem] sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4">
+			<h4 class="text-lg sm:text-xl font-extrabold text-black mb-2 sm:mb-3">NOVEMBER</h4>
 			<div class="grid grid-cols-7 gap-1.5 sm:gap-2.5 text-center mb-1 sm:mb-1.5">
 				{#each ['S', 'M', 'T', 'W', 'T', 'F', 'S'] as day, i (i)}
 					<div class="font-bold text-black text-sm sm:text-base">{day}</div>
