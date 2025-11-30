@@ -60,7 +60,7 @@
 					{#each schedules as schedule (schedule.id)}
 						<div class="flex items-start gap-2 sm:gap-2.5">
 							<div
-								class="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1.5"
+								class="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-[#FF6B35] shrink-0 mt-1.5"
 							></div>
 							<div>
 								<p class="font-bold text-[#2E3192] text-lg sm:text-xl leading-tight">
@@ -98,7 +98,7 @@
 		<h3 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-2 sm:mb-3">CATEGORY EVENT</h3>
 		<div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto">
 			<button
-				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
 				aria-label="Book Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -122,7 +122,7 @@
 			</button>
 
 			<button
-				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
 				aria-label="Hand Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -144,7 +144,7 @@
 			</button>
 
 			<button
-				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
 				aria-label="Carrot Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -187,7 +187,7 @@
 			</button>
 
 			<button
-				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
 				aria-label="People Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
