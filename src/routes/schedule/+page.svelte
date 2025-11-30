@@ -99,6 +99,7 @@
 		<div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto">
 			<button
 				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				aria-label="Book Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
 					<defs>
@@ -122,6 +123,7 @@
 
 			<button
 				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				aria-label="Hand Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
 					<defs>
@@ -143,6 +145,7 @@
 
 			<button
 				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				aria-label="Carrot Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
 					<defs>
@@ -185,6 +188,7 @@
 
 			<button
 				class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-[1.5rem] flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				aria-label="People Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
 					<defs>
