@@ -16,7 +16,7 @@
 {#if isAuthPage}
 	{@render children()}
 {:else}
-	<div class="min-h-screen bg-[#F5F1E8] flex flex-col">
+	<div class="min-h-screen bg-[#E8E3D5] flex flex-col">
 		{#if isAccountPage}
 			<Sidebar bind:show={showSidebar} />
 		{/if}
