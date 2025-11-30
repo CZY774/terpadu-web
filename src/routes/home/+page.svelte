@@ -17,7 +17,7 @@
 	});
 </script>
 
-<div class="min-h-screen bg-[#F5F1E8]" style="padding: 40px 20px 120px;">
+<div class="min-h-screen bg-[#F5F1E8]" style="padding: 40px 20px 120px 20px;">
 	<div class="mx-auto">
 		<h1
 			class="text-[1rem] lg:text-[2.5rem] md:text-[2rem] font-extrabold text-[#2E3192] text-center"
@@ -33,7 +33,7 @@
 				class="absolute w-30 lg:w-40 sm:w-40 top-[30px] md:top-[25px] sm:top-5 left-5 h-auto z-0"
 			/>
 			<div
-				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem] font-extrabold text-center rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem] ml-auto"
+				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem]N font-extrabold text-right rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem] ml-auto"
 				style="padding: 24px 40px; margin-bottom: 20px; letter-spacing: 0.02em; width: 87.5%;"
 			>
 				TODAY EVENT
@@ -76,7 +76,7 @@
 
 		<div class="relative" style="margin-bottom: 40px;">
 			<div
-				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem] font-extrabold rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem]"
+				class="bg-[#C4D82E]/70 text-[#2E3192] text-[1rem] lg:text-[2rem] md:text-[1.75rem] font-extrabold rounded-[2.5rem] lg:rounded-4xl md:rounded-[1.75rem] ml-auto"
 				style="padding: 24px 40px; margin-bottom: 20px; letter-spacing: 0.02em; width: 87.5%;"
 			>
 				MY TASK
