@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="relative" style="padding: 40px 20px 20px 20px;">
+<div class="relative">
 	<!-- Decorative Wave -->
 	<svg
 		class="absolute -top-10 right-0 w-full lg:w-[850px] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] pointer-events-none"
