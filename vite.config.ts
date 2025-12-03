@@ -9,20 +9,35 @@ export default defineConfig({
 		sveltekit(),
 		SvelteKitPWA({
 			registerType: 'autoUpdate',
+			includeAssets: ['favicon.ico', 'favicon-192.png', 'favicon-512.png'],
 			manifest: {
 				name: 'Gerbang Waktu',
 				short_name: 'Gerbang Waktu',
 				description: 'Terpadu Web App',
-				theme_color: '#C4D82E',
-				background_color: '#C4D82E',
+				theme_color: '#FF6B35',
+				background_color: '#E8E3D5',
 				display: 'standalone',
+				scope: '/',
+				start_url: '/',
 				icons: [
 					{
-						src: '/logo.png',
+						src: '/favicon-192.png',
+						sizes: '192x192',
+						type: 'image/png',
+						purpose: 'any maskable'
+					},
+					{
+						src: '/favicon-512.png',
 						sizes: '512x512',
-						type: 'image/png'
+						type: 'image/png',
+						purpose: 'any maskable'
 					}
 				]
+			},
+			workbox: {
+				globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+				skipWaiting: true,
+				clientsClaim: true
 			}
 		})
 	]
