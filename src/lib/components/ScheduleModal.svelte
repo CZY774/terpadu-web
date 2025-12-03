@@ -87,7 +87,7 @@
 					/>
 				</div>
 				<div class="mb-4">
-					<label class="block text-gray-700 text-sm font-bold mb-2">Category</label>
+					<div class="block text-gray-700 text-sm font-bold mb-2">Category</div>
 					<div class="grid grid-cols-4 gap-2">
 						{#each categories as category (category.id)}
 							<button
