@@ -14,7 +14,7 @@
 </script>
 
 <div class="flex justify-center min-h-screen bg-gray-900">
-	<div class="max-w-[320px] w-full relative">
+	<div class="max-w-[425px] w-full relative">
 		{#if isAuthPage}
 			<div class="min-h-screen">
 				{@render children()}
