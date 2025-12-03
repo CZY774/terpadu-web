@@ -5,11 +5,18 @@
 
 	onMount(() => {
 		setTimeout(() => goto(resolve('/login')), 2000);
+		debugger;
 	});
 </script>
 
-<div class="min-h-screen bg-[#C4D82E] flex items-center justify-center relative overflow-hidden">
-	<svg class="absolute top-0 right-0 w-full h-64" viewBox="0 0 1000 200" preserveAspectRatio="none">
+<div
+	class="min-h-screen bg-[#C4D82E] flex items-center justify-center relative overflow-hidden max-w-[320px] mx-auto"
+>
+	<svg
+		class="absolute -top-10 -right-18 w-full h-64 transform rotate-45"
+		viewBox="0 0 1000 200"
+		preserveAspectRatio="none"
+	>
 		<path
 			d="M 0,80 Q 250,20 500,80 T 1000,80"
 			fill="none"
@@ -36,7 +43,7 @@
 	</svg>
 
 	<svg
-		class="absolute bottom-0 left-0 w-full h-64"
+		class="absolute -bottom-10 -left-18 w-full h-64 transform rotate-45"
 		viewBox="0 0 1000 200"
 		preserveAspectRatio="none"
 	>
