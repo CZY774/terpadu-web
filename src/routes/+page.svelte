@@ -5,7 +5,6 @@
 
 	onMount(() => {
 		setTimeout(() => goto(resolve('/login')), 2000);
-		debugger;
 	});
 </script>
 
