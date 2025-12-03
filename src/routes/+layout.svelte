@@ -13,10 +13,12 @@
 	const isAccountPage = $derived($page.url.pathname === '/account');
 </script>
 
-{#if isAuthPage}
-	{@render children()}
-{:else}
-	<div class="min-h-screen bg-[#E8E3D5] flex flex-col">
+<div class="flex justify-center min-h-screen bg-gray-900">
+	<div class="max-w-[320px] w-full">
+		{#if isAuthPage}
+			{@render children()}
+		{:else}
+			<div class="min-h-screen bg-[#E8E3D5] flex flex-col">
 		{#if isAccountPage}
 			<Sidebar bind:show={showSidebar} />
 		{/if}
@@ -47,4 +49,6 @@
 
 		<BottomNav onAddClick={() => (showModal = true)} />
 	</div>
-{/if}
+		{/if}
+	</div>
+</div>
