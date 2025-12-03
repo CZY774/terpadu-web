@@ -18,7 +18,7 @@
 
 {#if show}
 	<div
-		class="fixed inset-0 bg-black/50 z-40"
+		class="absolute inset-0 bg-black/50 z-40"
 		onclick={close}
 		onkeydown={(e) => e.key === 'Escape' && close()}
 		role="button"
@@ -28,7 +28,7 @@
 {/if}
 
 <aside
-	class="fixed top-0 right-0 h-full w-80 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show
+	class="absolute top-0 right-0 h-full w-64 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show
 		? 'translate-x-0'
 		: 'translate-x-full'}"
 >
