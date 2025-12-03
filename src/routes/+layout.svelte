@@ -14,9 +14,11 @@
 </script>
 
 <div class="flex justify-center min-h-screen bg-gray-900">
-	<div class="max-w-[320px] w-full">
+	<div class="max-w-[320px] w-full relative">
 		{#if isAuthPage}
-			{@render children()}
+			<div class="min-h-screen">
+				{@render children()}
+			</div>
 		{:else}
 			<div class="min-h-screen bg-[#E8E3D5] flex flex-col">
 				{#if isAccountPage}
