@@ -17,28 +17,25 @@
 
 {#if show}
 	<div
-		class="fixed inset-0 bg-black/50 flex items-end justify-center z-50 p-4"
+		class="fixed inset-0 bg-black/50 flex items-end justify-center z-50 pb-20"
 		onclick={() => (show = false)}
 		onkeydown={(e) => e.key === 'Escape' && (show = false)}
 		role="button"
 		tabindex="0"
 		aria-label="Close dialog"
-		style="padding-bottom: 80px;"
 	>
 		<div
-			class="bg-[#F5F1E8] rounded-[3rem] p-8 w-full max-w-md"
+			class="bg-[#F5F1E8] rounded-[3rem] p-6 w-full max-w-[320px] mx-4"
 			onclick={(e) => e.stopPropagation()}
 			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
 			aria-modal="true"
 			tabindex="-1"
-			style="padding: 40px 20px;"
 		>
-			<div class="space-y-4">
+			<div class="space-y-3">
 				<button
 					onclick={handleNewSchedule}
 					class="w-full py-5 bg-gray-300 text-[#2E3192] font-bold text-xl rounded-full hover:bg-gray-400 transition"
-					style="margin-bottom: 20px;"
 				>
 					NEW SCHEDULE
 				</button>
