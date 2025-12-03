@@ -28,9 +28,9 @@
 {/if}
 
 <aside
-	class="absolute top-0 right-0 h-full w-64 bg-[#FF6B35] z-50 transform transition-transform duration-300 {show
-		? 'translate-x-0'
-		: 'translate-x-full'}"
+	class="absolute top-0 right-0 h-full w-64 bg-[#FF6B35] z-50 transform transition-all duration-300 {show
+		? 'translate-x-0 opacity-100'
+		: 'translate-x-full opacity-0'}"
 >
 	<div class="p-8">
 		<button onclick={close} class="text-white mb-8 ml-auto block text-3xl font-bold">✕</button>
