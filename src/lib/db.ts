@@ -13,6 +13,7 @@ export interface Schedule {
 	time: string;
 	category: string;
 	completed: boolean;
+	reminder?: string;
 }
 
 export interface Task {
@@ -52,10 +53,19 @@ export function addSchedule(
 	description: string,
 	date: string,
 	time: string,
-	category: string
+	category: string,
+	reminder?: string
 ): Schedule {
 	const schedules = getSchedules();
-	const newSchedule: Schedule = { id: uuidv4(), title, date, time, category, completed: false };
+	const newSchedule: Schedule = {
+		id: uuidv4(),
+		title,
+		date,
+		time,
+		category,
+		completed: false,
+		reminder
+	};
 	schedules.push(newSchedule);
 	saveSchedules(schedules);
 	return newSchedule;
