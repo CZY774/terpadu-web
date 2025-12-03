@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="min-h-screen bg-[#C4D82E] flex items-center justify-center relative overflow-hidden max-w-[320px] mx-auto"
+	class="min-h-screen bg-[#C4D82E] flex items-center justify-center relative overflow-hidden max-w-[425px] mx-auto"
 >
 	<svg
 		class="absolute -top-10 -right-18 w-full h-64 transform rotate-45"
