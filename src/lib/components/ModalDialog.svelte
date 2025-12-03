@@ -25,7 +25,7 @@
 		aria-label="Close dialog"
 	>
 		<div
-			class="bg-[#F5F1E8] rounded-[3rem] p-6 w-full max-w-[320px] mx-4"
+			class="bg-[#F5F1E8] rounded-[3rem] p-6 w-full max-w-[425px] mx-4"
 			onclick={(e) => e.stopPropagation()}
 			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
