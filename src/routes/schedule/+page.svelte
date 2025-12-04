@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getSchedules, type Schedule } from '$lib/db';
+	import { getSchedules, updateSchedule, type Schedule } from '$lib/db';
 
 	let username = $state('');
 	let schedules = $state<Schedule[]>([]);
@@ -12,6 +12,11 @@
 
 	function loadSchedules() {
 		schedules = getSchedules().filter((s) => s.date === new Date().toISOString().split('T')[0]);
+	}
+
+	function toggleComplete(id: string, completed: boolean) {
+		updateSchedule(id, { completed });
+		loadSchedules();
 	}
 </script>
 
@@ -59,10 +64,14 @@
 				<div class="space-y-2 sm:space-y-2.5">
 					{#each schedules as schedule (schedule.id)}
 						<div class="flex items-start gap-2 sm:gap-2.5">
-							<div
-								class="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-[#FF6B35] shrink-0 mt-1.5"
-							></div>
-							<div>
+							<button
+								onclick={() => toggleComplete(schedule.id, !schedule.completed)}
+								class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-[#FF6B35] flex-shrink-0 mt-1 {schedule.completed
+									? 'bg-[#FF6B35]'
+									: 'bg-white'}"
+								aria-label="Toggle complete"
+							></button>
+							<div class={schedule.completed ? 'opacity-50' : ''}>
 								<p class="font-bold text-[#2E3192] text-lg sm:text-xl leading-tight">
 									{schedule.title}
 								</p>
