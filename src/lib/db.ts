@@ -106,6 +106,20 @@ export function updateTask(id: string, updatedFields: Partial<Omit<Task, 'id'>>)
 	return undefined;
 }
 
+export function updateSchedule(
+	id: string,
+	updatedFields: Partial<Omit<Schedule, 'id'>>
+): Schedule | undefined {
+	const schedules = getSchedules();
+	const index = schedules.findIndex((s) => s.id === id);
+	if (index > -1) {
+		schedules[index] = { ...schedules[index], ...updatedFields };
+		saveSchedules(schedules);
+		return schedules[index];
+	}
+	return undefined;
+}
+
 export function getStreak(): number {
 	if (typeof window === 'undefined') return 0;
 	return parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '1');
