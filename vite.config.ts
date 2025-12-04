@@ -10,6 +10,9 @@ export default defineConfig({
 		SvelteKitPWA({
 			registerType: 'autoUpdate',
 			includeAssets: ['favicon.ico', 'favicon-192.png', 'favicon-512.png'],
+			workbox: {
+				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
+			},
 			manifest: {
 				name: 'Gerbang Waktu',
 				short_name: 'Gerbang Waktu',
