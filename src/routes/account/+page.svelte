@@ -52,7 +52,7 @@
 			<h2 class="text-2xl font-bold text-[#2E3192]">CATEGORY LIST</h2>
 			<a href={resolve('/tasks')} class="block text-2xl font-bold text-[#2E3192]">MY TASK</a>
 			<a href={resolve('/schedule')} class="block text-2xl font-bold text-[#2E3192]">SCHEDULE</a>
-			<button class="block text-2xl font-bold text-[#2E3192] text-left">RECORD</button>
+			<a href={resolve('/record')} class="block text-2xl font-bold text-[#2E3192]">RECORD</a>
 		</div>
 	</div>
 </div>
