@@ -11,7 +11,11 @@ export default defineConfig({
 			registerType: 'autoUpdate',
 			includeAssets: ['favicon.ico', 'favicon-192.png', 'favicon-512.png'],
 			workbox: {
-				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
+				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
+				globIgnores: ['**/prerendered/**']
+			},
+			kit: {
+				includeVersionFile: false
 			},
 			manifest: {
 				name: 'Gerbang Waktu',
