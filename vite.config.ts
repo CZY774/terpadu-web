@@ -12,7 +12,10 @@ export default defineConfig({
 			includeAssets: ['favicon.ico', 'favicon-192.png', 'favicon-512.png'],
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
-				globIgnores: ['**/prerendered/**']
+				globIgnores: ['**/prerendered/**', 'server/**']
+			},
+			injectManifest: {
+				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
 			},
 			kit: {
 				includeVersionFile: false
