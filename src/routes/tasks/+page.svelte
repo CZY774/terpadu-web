@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getTasks, type Task } from '$lib/db';
+	import { getTasks, updateTask, type Task } from '$lib/db';
 
 	let username = $state('');
 	let tasks = $state<Task[]>([]);
@@ -12,6 +12,11 @@
 
 	function loadTasks() {
 		tasks = getTasks().filter((t) => !t.completed);
+	}
+
+	function toggleComplete(id: string, completed: boolean) {
+		updateTask(id, { completed });
+		loadTasks();
 	}
 </script>
 
@@ -44,7 +49,11 @@
 		<div class="space-y-4">
 			{#each tasks as task (task.id)}
 				<div class="flex items-start gap-3">
-					<div class="w-5 h-5 rounded-full bg-[#FF6B35] flex-shrink-0 mt-1"></div>
+					<button
+						onclick={() => toggleComplete(task.id, true)}
+						class="w-6 h-6 rounded-full border-2 border-[#FF6B35] bg-white flex-shrink-0 mt-1"
+						aria-label="Mark complete"
+					></button>
 					<div>
 						<p class="font-bold text-[#2E3192] text-lg">{task.title}</p>
 						<p class="text-[#2E3192]">at {task.dueDate}</p>
