@@ -12,7 +12,7 @@
 	});
 </script>
 
-<div>
+<div style="padding: 40px 20px 120px 20px;">
 	<div class="flex items-start gap-8 mb-6">
 		<div class="w-24 h-24 rounded-full border-[5px] border-[#FF6B35] bg-white shrink-0"></div>
 		<h1 class="text-4xl font-bold text-[#2E3192] mt-6">
