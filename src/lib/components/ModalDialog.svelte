@@ -26,16 +26,18 @@
 	>
 		<div
 			class="bg-[#F5F1E8] rounded-[3rem] p-6 w-full max-w-[425px] mx-4"
+			style="margin-bottom: 70px;"
 			onclick={(e) => e.stopPropagation()}
 			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
 			aria-modal="true"
 			tabindex="-1"
 		>
-			<div class="space-y-3">
+			<div class="space-y-3" style="padding: 20px;">
 				<button
 					onclick={handleNewSchedule}
 					class="w-full py-5 bg-gray-300 text-[#2E3192] font-bold text-xl rounded-full hover:bg-gray-400 transition"
+					style="margin-bottom: 20px;"
 				>
 					NEW SCHEDULE
 				</button>
