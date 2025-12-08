@@ -22,7 +22,7 @@
 
 	<img src="/peek-mascot.png" alt="Mascot" class="absolute z-1 top-32 right-9 w-32 h-auto" />
 	<div class="bg-[#C4D82E]/60 rounded-[2.5rem] p-6 relative overflow-hidden">
-		<div class="mb-6 relative z-10">
+		<div class="mb-6 relative z-10" style="padding: 20px;">
 			<h2 class="text-2xl font-bold text-[#2E3192] mb-4">YOUR STREAK</h2>
 			<div class="bg-[#2E3192] rounded-full p-4 relative">
 				<svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 80" preserveAspectRatio="none">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<div class="space-y-3 relative z-10">
+		<div class="space-y-3 relative z-10" style="padding: 20px;">
 			<h2 class="text-2xl font-bold text-[#2E3192]">CATEGORY LIST</h2>
 			<a href={resolve('/tasks')} class="block text-2xl font-bold text-[#2E3192]">MY TASK</a>
 			<a href={resolve('/schedule')} class="block text-2xl font-bold text-[#2E3192]">SCHEDULE</a>
