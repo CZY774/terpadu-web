@@ -162,7 +162,7 @@
 				{/each}
 			</div>
 			<div class="grid grid-cols-7 gap-1.5 sm:gap-2.5 text-center">
-				{#each getCalendarDays() as day (day)}
+				{#each getCalendarDays() as day, index (index)}
 					{#if day === null}
 						<div class="w-7 h-7 sm:w-9 sm:h-9"></div>
 					{:else}
