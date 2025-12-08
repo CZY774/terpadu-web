@@ -100,10 +100,10 @@
 			<div class="flex gap-4 justify-center flex-wrap">
 				<button
 					type="button"
-					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 shadow-[inset_0_0_0_3px_{selectedCategory ===
+					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 transition-shadow {selectedCategory ===
 					'book'
-						? '#2E3192'
-						: 'rgba(255,255,255,0.3)'}]"
+						? 'shadow-[inset_0_0_0_3px_#2E3192]'
+						: 'shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]'}"
 					onclick={() => (selectedCategory = 'book')}
 					aria-label="Book Category"
 				>
@@ -128,10 +128,10 @@
 				</button>
 				<button
 					type="button"
-					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 shadow-[inset_0_0_0_3px_{selectedCategory ===
+					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 transition-shadow {selectedCategory ===
 					'hands'
-						? '#2E3192'
-						: 'rgba(255,255,255,0.3)'}]"
+						? 'shadow-[inset_0_0_0_3px_#2E3192]'
+						: 'shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]'}"
 					onclick={() => (selectedCategory = 'hands')}
 					aria-label="Hand Category"
 				>
@@ -154,10 +154,10 @@
 				</button>
 				<button
 					type="button"
-					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 shadow-[inset_0_0_0_3px_{selectedCategory ===
+					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 transition-shadow {selectedCategory ===
 					'carrot'
-						? '#2E3192'
-						: 'rgba(255,255,255,0.3)'}]"
+						? 'shadow-[inset_0_0_0_3px_#2E3192]'
+						: 'shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]'}"
 					onclick={() => (selectedCategory = 'carrot')}
 					aria-label="Carrot Category"
 				>
@@ -201,10 +201,10 @@
 				</button>
 				<button
 					type="button"
-					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 shadow-[inset_0_0_0_3px_{selectedCategory ===
+					class="w-24 h-24 bg-[#C4D82E] rounded-[2rem] flex items-center justify-center p-3 transition-shadow {selectedCategory ===
 					'people'
-						? '#2E3192'
-						: 'rgba(255,255,255,0.3)'}]"
+						? 'shadow-[inset_0_0_0_3px_#2E3192]'
+						: 'shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]'}"
 					onclick={() => (selectedCategory = 'people')}
 					aria-label="People Category"
 				>
