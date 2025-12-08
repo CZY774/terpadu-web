@@ -5,10 +5,15 @@
 	let username = $state('');
 	let schedules = $state<Schedule[]>([]);
 	let selectedCategory = $state('');
+	let currentDate = $state(new Date());
+	let today = new Date();
+
+	$effect(() => {
+		loadSchedules();
+	});
 
 	onMount(() => {
 		username = localStorage.getItem('username') || 'LOU';
-		loadSchedules();
 	});
 
 	function loadSchedules() {
@@ -18,6 +23,50 @@
 	function toggleComplete(id: string, completed: boolean) {
 		updateSchedule(id, { completed });
 		loadSchedules();
+	}
+
+	function getMonthName(date: Date) {
+		return date.toLocaleString('en-US', { month: 'long' }).toUpperCase();
+	}
+
+	function getDaysInMonth(date: Date) {
+		return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+	}
+
+	function getFirstDayOfMonth(date: Date) {
+		return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+	}
+
+	function prevMonth() {
+		currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+	}
+
+	function nextMonth() {
+		currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+	}
+
+	function isToday(day: number) {
+		return (
+			day === today.getDate() &&
+			currentDate.getMonth() === today.getMonth() &&
+			currentDate.getFullYear() === today.getFullYear()
+		);
+	}
+
+	function getCalendarDays() {
+		const daysInMonth = getDaysInMonth(currentDate);
+		const firstDay = getFirstDayOfMonth(currentDate);
+		const days = [];
+
+		for (let i = 0; i < firstDay; i++) {
+			days.push(null);
+		}
+
+		for (let i = 1; i <= daysInMonth; i++) {
+			days.push(i);
+		}
+
+		return days;
 	}
 </script>
 
@@ -87,21 +136,44 @@
 
 		<h3 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-2 sm:mb-3">CALENDAR</h3>
 		<div class="bg-[#C4D82E] rounded-[2.5rem] sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4">
-			<h4 class="text-lg sm:text-xl font-extrabold text-black mb-2 sm:mb-3">NOVEMBER</h4>
+			<div class="flex items-center justify-between mb-2 sm:mb-3">
+				<button
+					onclick={prevMonth}
+					class="w-8 h-8 flex items-center justify-center rounded-full bg-[#2E3192] text-white font-bold hover:bg-opacity-80 transition"
+					aria-label="Previous month"
+				>
+					‹
+				</button>
+				<h4 class="text-lg sm:text-xl font-extrabold text-black">
+					{getMonthName(currentDate)}
+					{currentDate.getFullYear()}
+				</h4>
+				<button
+					onclick={nextMonth}
+					class="w-8 h-8 flex items-center justify-center rounded-full bg-[#2E3192] text-white font-bold hover:bg-opacity-80 transition"
+					aria-label="Next month"
+				>
+					›
+				</button>
+			</div>
 			<div class="grid grid-cols-7 gap-1.5 sm:gap-2.5 text-center mb-1 sm:mb-1.5">
 				{#each ['S', 'M', 'T', 'W', 'T', 'F', 'S'] as day, i (i)}
 					<div class="font-bold text-black text-sm sm:text-base">{day}</div>
 				{/each}
 			</div>
 			<div class="grid grid-cols-7 gap-1.5 sm:gap-2.5 text-center">
-				{#each Array.from({ length: 30 }, (_, i) => i + 1) as day (day)}
-					<button
-						class="w-7 h-7 sm:w-9 sm:h-9 rounded-full {day === 20
-							? 'bg-[#2E3192] text-white'
-							: 'text-black'} font-bold text-sm sm:text-base hover:bg-[#2E3192] hover:text-white transition"
-					>
-						{day}
-					</button>
+				{#each getCalendarDays() as day (day)}
+					{#if day === null}
+						<div class="w-7 h-7 sm:w-9 sm:h-9"></div>
+					{:else}
+						<button
+							class="w-7 h-7 sm:w-9 sm:h-9 rounded-full {isToday(day)
+								? 'bg-[#2E3192] text-white'
+								: 'text-black'} font-bold text-sm sm:text-base hover:bg-[#2E3192] hover:text-white transition"
+						>
+							{day}
+						</button>
+					{/if}
 				{/each}
 			</div>
 		</div>
@@ -110,12 +182,10 @@
 		<div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto">
 			<button
 				onclick={() => (selectedCategory = selectedCategory === 'book' ? '' : 'book')}
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 transition-shadow {selectedCategory ===
 				'book'
-					? '3px_#2E3192'
-					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'book'
-					? '4px_#2E3192'
-					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
+					? 'shadow-[inset_0_0_0_3px_#2E3192]'
+					: 'shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)]'}"
 				aria-label="Book Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -140,12 +210,10 @@
 
 			<button
 				onclick={() => (selectedCategory = selectedCategory === 'hands' ? '' : 'hands')}
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 transition-shadow {selectedCategory ===
 				'hands'
-					? '3px_#2E3192'
-					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'hands'
-					? '4px_#2E3192'
-					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
+					? 'shadow-[inset_0_0_0_3px_#2E3192]'
+					: 'shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)]'}"
 				aria-label="Hand Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -168,12 +236,10 @@
 
 			<button
 				onclick={() => (selectedCategory = selectedCategory === 'carrot' ? '' : 'carrot')}
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 transition-shadow {selectedCategory ===
 				'carrot'
-					? '3px_#2E3192'
-					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'carrot'
-					? '4px_#2E3192'
-					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
+					? 'shadow-[inset_0_0_0_3px_#2E3192]'
+					: 'shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)]'}"
 				aria-label="Carrot Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -217,12 +283,10 @@
 
 			<button
 				onclick={() => (selectedCategory = selectedCategory === 'people' ? '' : 'people')}
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 transition-shadow {selectedCategory ===
 				'people'
-					? '3px_#2E3192'
-					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'people'
-					? '4px_#2E3192'
-					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
+					? 'shadow-[inset_0_0_0_3px_#2E3192]'
+					: 'shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)]'}"
 				aria-label="People Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
