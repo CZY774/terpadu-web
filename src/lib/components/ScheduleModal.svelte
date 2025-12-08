@@ -93,10 +93,7 @@
 							<button
 								type="button"
 								on:click={() => (selectedCategory = category.id)}
-								class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-2xl flex items-center justify-center p-2 shadow-[inset_0_0_0_2px_{selectedCategory ===
-								category.id
-									? '#2E3192'
-									: 'rgba(255,255,255,0.3)'}] transition-all"
+								class="aspect-square bg-gradient-to-br from-[#C4D82E] to-[#B8CC28] rounded-2xl flex items-center justify-center p-2 transition-all {selectedCategory === category.id ? 'ring-4 ring-[#2E3192] scale-95' : 'ring-2 ring-white/30'}"
 								aria-label="{category.name} Category"
 							>
 								{#if category.name === 'Book'}
