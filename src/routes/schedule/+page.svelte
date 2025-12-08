@@ -138,7 +138,7 @@
 		<div class="bg-[#C4D82E] rounded-[2.5rem] sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4">
 			<div class="flex items-center justify-between mb-2 sm:mb-3">
 				<button
-					onclick={prevMonth}
+					onclick={() => prevMonth()}
 					class="w-8 h-8 flex items-center justify-center rounded-full bg-[#2E3192] text-white font-bold hover:bg-opacity-80 transition"
 					aria-label="Previous month"
 				>
@@ -149,7 +149,7 @@
 					{currentDate.getFullYear()}
 				</h4>
 				<button
-					onclick={nextMonth}
+					onclick={() => nextMonth()}
 					class="w-8 h-8 flex items-center justify-center rounded-full bg-[#2E3192] text-white font-bold hover:bg-opacity-80 transition"
 					aria-label="Next month"
 				>
