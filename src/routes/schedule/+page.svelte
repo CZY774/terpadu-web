@@ -4,6 +4,7 @@
 
 	let username = $state('');
 	let schedules = $state<Schedule[]>([]);
+	let selectedCategory = $state('');
 
 	onMount(() => {
 		username = localStorage.getItem('username') || 'LOU';
@@ -108,7 +109,13 @@
 		<h3 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-2 sm:mb-3">CATEGORY EVENT</h3>
 		<div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto">
 			<button
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				onclick={() => (selectedCategory = selectedCategory === 'book' ? '' : 'book')}
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				'book'
+					? '3px_#2E3192'
+					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'book'
+					? '4px_#2E3192'
+					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
 				aria-label="Book Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -132,7 +139,13 @@
 			</button>
 
 			<button
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				onclick={() => (selectedCategory = selectedCategory === 'hands' ? '' : 'hands')}
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				'hands'
+					? '3px_#2E3192'
+					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'hands'
+					? '4px_#2E3192'
+					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
 				aria-label="Hand Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -154,7 +167,13 @@
 			</button>
 
 			<button
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				onclick={() => (selectedCategory = selectedCategory === 'carrot' ? '' : 'carrot')}
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				'carrot'
+					? '3px_#2E3192'
+					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'carrot'
+					? '4px_#2E3192'
+					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
 				aria-label="Carrot Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
@@ -197,7 +216,13 @@
 			</button>
 
 			<button
-				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.3)] sm:shadow-[inset_0_0_0_3px_rgba(255,255,255,0.3)]"
+				onclick={() => (selectedCategory = selectedCategory === 'people' ? '' : 'people')}
+				class="aspect-square bg-linear-to-br from-[#C4D82E] to-[#B8CC28] rounded-[1.2rem] sm:rounded-3xl flex items-center justify-center p-2 sm:p-3 shadow-[inset_0_0_0_{selectedCategory ===
+				'people'
+					? '3px_#2E3192'
+					: '2px_rgba(255,255,255,0.3)'} sm:shadow-[inset_0_0_0_{selectedCategory === 'people'
+					? '4px_#2E3192'
+					: '3px_rgba(255,255,255,0.3)'}] transition-shadow"
 				aria-label="People Category"
 			>
 				<svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
