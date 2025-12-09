@@ -28,7 +28,7 @@
 
 				{#if isAccountPage}
 					<header
-						class="bg-[#FF6B35] rounded-b-[0.9rem] sm:rounded-b-[0.9rem] lg:rounded-b-[0.9rem] px-7 py-6 md:py-5 sm:py-4 flex justify-end shadow-[0_4px_12px_rgba(255,107,53,0.15)]"
+						class="bg-[#FF6B35] rounded-b-[0.9rem] sm:rounded-b-[0.9rem] lg:rounded-b-[0.9rem] px-7 py-6 md:py-5 sm:py-4 flex justify-end shadow-[0_4px_12px_rgba(255,107,53,0.15)] relative z-30"
 						style="padding-right: 40px;"
 					>
 						<button
