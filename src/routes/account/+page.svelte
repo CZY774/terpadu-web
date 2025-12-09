@@ -12,10 +12,10 @@
 	});
 </script>
 
-<div class="max-w-[425px] mx-auto px-5 pt-10 pb-5">
+<div class="max-w-[425px] mx-auto px-5 pt-10 pb-5" style="padding: 40px 20px 120px 20px;">
 	<div class="flex items-start gap-5 mb-6">
 		<div class="w-20 h-20 rounded-full border-4 border-[#FF6B35] bg-white shrink-0"></div>
-		<h1 class="text-3xl font-bold text-[#2E3192] mt-4 break-words">
+		<h1 class="text-3xl font-bold text-[#2E3192] mt-4 wrap-break-words">
 			{username.toUpperCase()}
 		</h1>
 	</div>
@@ -24,10 +24,10 @@
 		<img
 			src="/peek-mascot.png"
 			alt="Mascot"
-			class="absolute z-10 -top-2 right-2 w-28 h-auto pointer-events-none"
+			class="absolute z-10 -top-15 right-2 w-28 h-auto pointer-events-none"
 		/>
 		<div class="bg-[#C4D82E]/60 rounded-[2.5rem] p-5 relative overflow-hidden">
-			<div class="mb-6 relative z-20 px-4 pt-4">
+			<div class="mb-6 relative z-20 px-4 pt-4" style="padding: 12px;">
 				<h2 class="text-2xl font-bold text-[#2E3192] mb-4">YOUR STREAK</h2>
 				<div class="bg-[#2E3192] rounded-full p-3 relative">
 					<svg
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 
-			<div class="space-y-4 relative z-20 px-4 pb-4">
+			<div class="space-y-4 relative z-20 px-4 pb-4" style="padding: 12px;">
 				<h2 class="text-2xl font-bold text-[#2E3192] mb-2">CATEGORY LIST</h2>
 				<a
 					href={resolve('/tasks')}
