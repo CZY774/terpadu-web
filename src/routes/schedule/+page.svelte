@@ -135,16 +135,20 @@
 		</div>
 
 		<h3 class="text-3xl sm:text-4xl font-bold text-[#2E3192] mb-2 sm:mb-3">CALENDAR</h3>
-		<div class="bg-[#C4D82E] rounded-[2.5rem] sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4">
-			<div class="flex items-center justify-between mb-2 sm:mb-3">
+		<div
+			class="bg-[#C4D82E] rounded-3xl sm:rounded-[3rem] p-4 sm:p-5 mb-3 sm:mb-4"
+			style="padding: 8px;"
+		>
+			<div class="flex items-center justify-center">
 				<button
 					onclick={() => prevMonth()}
 					class="w-8 h-8 flex items-center justify-center rounded-full bg-[#2E3192] text-white font-bold hover:bg-opacity-80 transition"
+					style="margin-right: 10px;"
 					aria-label="Previous month"
 				>
 					‹
 				</button>
-				<h4 class="text-lg sm:text-xl font-extrabold text-black">
+				<h4 class="text-lg sm:text-xl font-extrabold text-black" style="margin-right: 10px;">
 					{getMonthName(currentDate)}
 					{currentDate.getFullYear()}
 				</h4>
